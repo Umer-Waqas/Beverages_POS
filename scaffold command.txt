@@ -1,0 +1,5 @@
+ Scaffold-DbContext "Server=DESKTOP-BLPH810\SQLEXPRESS;Database=GK_Restaurant;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -Context AppDbContext -ContextDir ../Restaurant_MS_Infrastructure/Database -OutputDir ../Restaurant_MS_Core/Entities -UseDatabaseNames -Force
+
+
+power shell version and run infrastructure folder
+ Scaffold-DbContext "Server=DESKTOP-BLPH810\SQLEXPRESS;Database=GK_Restaurant;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -Context AppDbContext -ContextDir ../Restaurant_MS_Infrastructure/Database -OutputDir ../Restaurant_MS_Core/Entities -UseDatabaseNames -Force

@@ -1,0 +1,272 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Update="Reports\Accounts\BillPaymentsUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Accounts\frmAccountsReportsUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\AdjustmentsViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\dsPharmacyReports.Designer.cs">
+      <DependentUpon>dsPharmacyReports.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Reports\Financial\DeletedInvoicesUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Financial\DeletedInvoicesViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Financial\frmFinancialReportsUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Financial\PaymentModeUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Financial\PaymentModeViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Financial\PendingPayemntUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Financial\PendingPaymentsViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Financial\RefundUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Financial\RefundViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Financial\ShiftUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Financial\ShiftViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Financial\TrancationsViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Financial\TransactionUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\frmItemBarcodeViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\frmSkimedCashViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\GK_DataSet.Designer.cs">
+      <DependentUpon>GK_DataSet.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Reports\InvoiceViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\ItemsViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\PatientInvoiceRefundViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\PatientInvoiceViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Pharmacy\DailyCollectionViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Pharmacy\DailySummaryReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Pharmacy\DeadStocksViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Pharmacy\DeadStockUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Pharmacy\DiscountsUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Pharmacy\DiscountsViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Pharmacy\dlgPrintOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Pharmacy\ExpenseViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Pharmacy\ExpiryUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Pharmacy\ExpiryViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Pharmacy\frmPharmacyReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Pharmacy\IncomeStatementUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Pharmacy\IncomeStatementViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Pharmacy\InvoiceTransactionsViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Pharmacy\ItemSalesViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Pharmacy\ItemsListViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Pharmacy\ItemWisePurchaseUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Pharmacy\ItemWisePurchaseViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Pharmacy\ItemWiseRevenueUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Pharmacy\ItemWiseRevenueViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Pharmacy\ItemWiseSaleUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Pharmacy\LowStockUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Pharmacy\LowStocsViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Pharmacy\NarcoticDrugsUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Pharmacy\NarcoticDrugsViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Pharmacy\PatientInvoiceViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Pharmacy\ProfiStatementUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Pharmacy\PurchaseReportsUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Pharmacy\PurchaseReportsViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Pharmacy\StockStatisticsUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Pharmacy\StockStatisticsUI_.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Pharmacy\StockValueViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Pharmacy\StoreIDataset.Designer.cs">
+      <DependentUpon>StoreIDataset.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Reports\Pharmacy\TransactionUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\POSInvoices\POSInvoiceViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Product\AllItemsDiscountsUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Product\AllItems_DiscountedPriceUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Product\DiscountedItemViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Product\DiscountedPriceUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Product\DiscountsViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Product\frmProductReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Product\ProductExpiryUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Product\ProductExpiryViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Product\ProductPriceUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Product\ProductPriceViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Product\ProfitMarginUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\Product\ProfitMarginViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\PurchaseOrderViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\StockConsumptionsViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\StockConsumptionViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\StockDetailViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\StockHOReturnViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\StockPaymentViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Reports\StocksViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Reports\dsPharmacyReports.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>dsPharmacyReports.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Update="Reports\GK_DataSet.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>GK_DataSet.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Update="Reports\Pharmacy\StoreIDataset.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>StoreIDataset.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,37 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace Restaurant_MS_Core.Entities;
+
+public partial class POSClosing
+{
+    public int POSClosingId { get; set; }
+
+    public int POSCode { get; set; }
+
+    public DateTime ClosingDate { get; set; }
+
+    public double CashCounted { get; set; }
+
+    public double? CashSubmitted { get; set; }
+
+    public double CashTillIn { get; set; }
+
+    public DateTime CreatedAt { get; set; }
+
+    public DateTime UpdatedAt { get; set; }
+
+    public DateTime? SyncedAt { get; set; }
+
+    public bool IsActive { get; set; }
+
+    public bool IsNew { get; set; }
+
+    public bool IsUpdate { get; set; }
+
+    public bool IsSynced { get; set; }
+
+    public int UserId { get; set; }
+
+    public virtual User User { get; set; } = null!;
+}
