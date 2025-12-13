@@ -74,7 +74,7 @@ namespace Restaurant_MS_UI.Menu.Main
         {
 
             this.btnAdd.Text = "Update";
-            //cmbUserType.SelectedValue = LoadedUser.UserRole.UserRoleId;
+            //cmbUserType.SelectedValue = LoadedUser.Role.RoleId;
             txtName.Text = LoadedUser.UserName;
             txtEmail.Text = LoadedUser.Email;
             txtPhone.Text = LoadedUser.Phone;

@@ -45,7 +45,7 @@ namespace Restaurant_MS_UI.Menu.Main
 
             foreach (UserRole r in Roles)
             {
-                //if (r.UserRoleId == 1)
+                //if (r.RoleId == 1)
                 //{
 
                 foreach (User u in r.Users)
@@ -55,25 +55,25 @@ namespace Restaurant_MS_UI.Menu.Main
                 //continue;
                 //}
 
-                //if (r.UserRoleId == 2)
+                //if (r.RoleId == 2)
                 //{
-                //    foreach (User u in r.Users)
+                //    foreach (User u in r.UserRoles)
                 //    {
                 //        grdPharmacists.Rows.Add(u.UserId, u.UserName, u.Email, u.Phone, "Edit", "Delete");
                 //    }
                 //    continue;
                 //}
-                //if (r.UserRoleId == 3)
+                //if (r.RoleId == 3)
                 //{
-                //    foreach (User u in r.Users)
+                //    foreach (User u in r.UserRoles)
                 //    {
                 //        grdAccountants.Rows.Add(u.UserId, u.UserName, u.Email, u.Phone, "Edit", "Delete");
                 //    }
                 //    continue;
                 //}
-                //if (r.UserRoleId == 4)// doctoes
+                //if (r.RoleId == 4)// doctoes
                 //{
-                //    foreach (User u in r.Users)
+                //    foreach (User u in r.UserRoles)
                 //    {
                 //        grdDoctors.Rows.Add(u.UserId, u.UserName, u.Email, u.Phone, "Edit", "Delete");
                 //    }
@@ -112,7 +112,7 @@ namespace Restaurant_MS_UI.Menu.Main
             foreach (var r in roles)
             {
                 ToolStripMenuItem mi = new ToolStripMenuItem();
-                if (r.UserRoleId == 1)
+                if (r.UserRoleId== 1)
                 {
                     mi.Tag = 1;
                 }
@@ -237,7 +237,7 @@ namespace Restaurant_MS_UI.Menu.Main
                 int UserId = Convert.ToInt32(grdAdmins.Rows[e.RowIndex].Cells["colUserIdAd"].Value);
                 if (e.ColumnIndex == grdAdmins.Columns["colEditAd"].Index)
                 {
-                    if (!SharedFunctions.IsActionallowed("Edit Users") && !SharedVariables.LoggedInUser.UserRoles.Any(r => r.IsAdmin))
+                    if (!SharedFunctions.IsActionallowed("Edit UserRoles") && !SharedVariables.LoggedInUser.UserRoles.Any(r => r.IsAdmin))
                     {
                         MessageBox.Show("You Do Not Have Permissions to Perform This Action", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         return;
@@ -249,7 +249,7 @@ namespace Restaurant_MS_UI.Menu.Main
                 if (e.ColumnIndex == grdAdmins.Columns["colDeleteAd"].Index)
                 {
 
-                    if (!SharedFunctions.IsActionallowed("Delete Users") && !SharedVariables.LoggedInUser.UserRoles.Any(r => r.IsAdmin))
+                    if (!SharedFunctions.IsActionallowed("Delete UserRoles") && !SharedVariables.LoggedInUser.UserRoles.Any(r => r.IsAdmin))
                     {
                         MessageBox.Show("You Do Not Have Permissions to Perform This Action", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         return;
@@ -306,7 +306,7 @@ namespace Restaurant_MS_UI.Menu.Main
 
         private void btnAddUser_Click(object sender, EventArgs e)
         {
-            if (!SharedFunctions.IsActionallowed("Create Users") && !SharedVariables.LoggedInUser.UserRoles.Any(r => r.IsAdmin))
+            if (!SharedFunctions.IsActionallowed("Create UserRoles") && !SharedVariables.LoggedInUser.UserRoles.Any(r => r.IsAdmin))
             {
                 MessageBox.Show("You Do Not Have Permissions to Perform This Action", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;

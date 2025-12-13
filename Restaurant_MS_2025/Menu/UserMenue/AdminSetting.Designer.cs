@@ -3750,7 +3750,7 @@
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(54, 20);
             this.label44.TabIndex = 105;
-            this.label44.Text = "Users";
+            this.label44.Text = "UserRoles";
             // 
             // line1
             // 

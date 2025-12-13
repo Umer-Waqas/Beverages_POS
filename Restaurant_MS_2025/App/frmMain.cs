@@ -1013,7 +1013,7 @@ namespace Restaurant_MS_UI.App
         //    {
         //        Label l1 = new Label();
         //        l1.Name = "lblusers";
-        //        this.setSubmenuStyle(l1, "Users");
+        //        this.setSubmenuStyle(l1, "UserRoles");
         //        //Label l2 = new Label();
         //        //l2.Name = "lbllogin";
         //        //this.setSubmenuStyle(l2, "Login");

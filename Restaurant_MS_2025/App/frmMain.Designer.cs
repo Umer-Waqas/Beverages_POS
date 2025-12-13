@@ -429,14 +429,14 @@
             this.addStockToolStripMenuItem});
             this.userToolStripMenuItem.Name = "userToolStripMenuItem";
             this.userToolStripMenuItem.Size = new System.Drawing.Size(56, 24);
-            this.userToolStripMenuItem.Text = "Users";
+            this.userToolStripMenuItem.Text = "UserRoles";
             this.userToolStripMenuItem.Click += new System.EventHandler(this.userToolStripMenuItem_Click);
             // 
             // usersToolStripMenuItem
             // 
             this.usersToolStripMenuItem.Name = "usersToolStripMenuItem";
             this.usersToolStripMenuItem.Size = new System.Drawing.Size(211, 26);
-            this.usersToolStripMenuItem.Text = "Users";
+            this.usersToolStripMenuItem.Text = "UserRoles";
             this.usersToolStripMenuItem.Visible = false;
             this.usersToolStripMenuItem.Click += new System.EventHandler(this.usersToolStripMenuItem_Click);
             // 
@@ -813,7 +813,7 @@
             this.lblUsers.Size = new System.Drawing.Size(194, 38);
             this.lblUsers.TabIndex = 7;
             this.lblUsers.Tag = "level1";
-            this.lblUsers.Text = "         Users";
+            this.lblUsers.Text = "         UserRoles";
             this.lblUsers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblUsers.Click += new System.EventHandler(this.MainMenue_Click);
             this.lblUsers.MouseEnter += new System.EventHandler(this.MPharmacy_MouseEnter);

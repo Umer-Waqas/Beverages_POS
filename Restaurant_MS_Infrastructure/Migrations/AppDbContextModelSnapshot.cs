@@ -3113,8 +3113,7 @@ namespace Restaurant_MS_Infrastructure.Migrations
                         .HasColumnType("float");
 
                     b.Property<string>("Email")
-                        .HasMaxLength(600)
-                        .HasColumnType("nvarchar(600)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
@@ -3143,14 +3142,9 @@ namespace Restaurant_MS_Infrastructure.Migrations
                     b.Property<string>("UserName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("UserRoleId")
-                        .HasColumnType("int");
-
                     b.HasKey("UserId");
 
                     b.HasIndex("AdminShiftSettingId");
-
-                    b.HasIndex("UserRoleId");
 
                     b.ToTable("Users");
                 });
@@ -3237,8 +3231,6 @@ namespace Restaurant_MS_Infrastructure.Migrations
 
                     b.HasKey("UserRoleId");
 
-                    b.HasIndex("UserId");
-
                     b.ToTable("UserRoles");
                 });
 
@@ -3293,6 +3285,21 @@ namespace Restaurant_MS_Infrastructure.Migrations
                     b.HasIndex("UsersUserId");
 
                     b.ToTable("RightUser");
+                });
+
+            modelBuilder.Entity("UserUserRole", b =>
+                {
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserRoleId")
+                        .HasColumnType("int");
+
+                    b.HasKey("UserId", "UserRoleId");
+
+                    b.HasIndex("UserRoleId");
+
+                    b.ToTable("UserUserRole");
                 });
 
             modelBuilder.Entity("ItemSupplier", b =>
@@ -4023,10 +4030,6 @@ namespace Restaurant_MS_Infrastructure.Migrations
                         .WithMany("Users")
                         .HasForeignKey("AdminShiftSettingId");
 
-                    b.HasOne("Restaurant_MS_Core.Entities.UserRole", null)
-                        .WithMany("Users")
-                        .HasForeignKey("UserRoleId");
-
                     b.Navigation("AdminShiftSetting");
                 });
 
@@ -4034,16 +4037,6 @@ namespace Restaurant_MS_Infrastructure.Migrations
                 {
                     b.HasOne("Restaurant_MS_Core.Entities.User", "User")
                         .WithMany("UserPermissions")
-                        .HasForeignKey("UserId")
-                        .IsRequired();
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("Restaurant_MS_Core.Entities.UserRole", b =>
-                {
-                    b.HasOne("Restaurant_MS_Core.Entities.User", "User")
-                        .WithMany("UserRoles")
                         .HasForeignKey("UserId")
                         .IsRequired();
 
@@ -4061,6 +4054,21 @@ namespace Restaurant_MS_Infrastructure.Migrations
                     b.HasOne("Restaurant_MS_Core.Entities.User", null)
                         .WithMany()
                         .HasForeignKey("UsersUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("UserUserRole", b =>
+                {
+                    b.HasOne("Restaurant_MS_Core.Entities.User", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Restaurant_MS_Core.Entities.UserRole", null)
+                        .WithMany()
+                        .HasForeignKey("UserRoleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
@@ -4305,13 +4313,6 @@ namespace Restaurant_MS_Infrastructure.Migrations
                     b.Navigation("Templates");
 
                     b.Navigation("UserPermissions");
-
-                    b.Navigation("UserRoles");
-                });
-
-            modelBuilder.Entity("Restaurant_MS_Core.Entities.UserRole", b =>
-                {
-                    b.Navigation("Users");
                 });
 #pragma warning restore 612, 618
         }

@@ -180,9 +180,9 @@ namespace Restaurant_MS_UI
         {
             List<RightsVM> Rights = new List<RightsVM>();
 
-            Rights.Add(new RightsVM { RightId = 1, RightDescription = "Create Users" });
-            Rights.Add(new RightsVM { RightId = 2, RightDescription = "Edit Users" });
-            Rights.Add(new RightsVM { RightId = 3, RightDescription = "Delete Users" });
+            Rights.Add(new RightsVM { RightId = 1, RightDescription = "Create UserRoles" });
+            Rights.Add(new RightsVM { RightId = 2, RightDescription = "Edit UserRoles" });
+            Rights.Add(new RightsVM { RightId = 3, RightDescription = "Delete UserRoles" });
             Rights.Add(new RightsVM { RightId = 4, RightDescription = "Edit Payment/Invoice Date" });
             Rights.Add(new RightsVM { RightId = 5, RightDescription = "View Financial Reports" });
             Rights.Add(new RightsVM { RightId = 6, RightDescription = "Delete Patients" });
@@ -442,7 +442,7 @@ namespace Restaurant_MS_UI
             //return conStr;
             if (SharedVariables.UseLocalDb)
             {
-                return ConfigurationManager.ConnectionStrings["PharmacyCon_Local"].ConnectionString;
+                return ConfigurationManager.ConnectionStrings["BevPOS"].ConnectionString;
             }
             var conStr = SqlConnectionStringBuilder();
             return conStr;
@@ -453,10 +453,10 @@ namespace Restaurant_MS_UI
            
             if (SharedVariables.UseLocalDb)
             {
-                return ConfigurationManager.ConnectionStrings["PharmacyCon_Local"].ConnectionString;
+                return ConfigurationManager.ConnectionStrings["BevPOS"].ConnectionString;
             }
                         
-            string EncryptedConStr = Environment.GetEnvironmentVariable("GK_RESTAURANT");
+            string EncryptedConStr = Environment.GetEnvironmentVariable("BevPOS");
            
             SqlConnectionStringBuilder sqlBuilder = new SqlConnectionStringBuilder(EncryptedConStr);
             //string DataSource = Utilities.CryptopEngine.Decrypt(sqlBuilder.DataSource, Shared.Salt);

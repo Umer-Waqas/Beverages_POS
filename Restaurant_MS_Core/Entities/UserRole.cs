@@ -27,7 +27,7 @@ public partial class UserRole
 
     public int UserId { get; set; }
 
-    public virtual User User { get; set; } = null!;
+    //public virtual User User { get; set; } = null!;
 
     public virtual ICollection<User> Users { get; set; } = new List<User>();
 }

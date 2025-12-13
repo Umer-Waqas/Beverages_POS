@@ -31,19 +31,19 @@ namespace Restaurant_MS_Infrastructure.Repository
 
         public List<string> GetAdminUsersEmails()
         {
-            //return cxt.Users
+            //return cxt.UserRoles
             //            .Where(u => u.IsActive)
-            //            .Where(u => u.UserRole.Description.ToLower().Equals("admin"))
+            //            .Where(u => u.Role.Description.ToLower().Equals("admin"))
             //            .Select(u => u.Email).ToList();
             return null;
         }
 
-        public List<User> GetActiveDoctors()
-        {
-            return cxt.Users
-                .Where(u => u.IsActive && u.UserRoles.Any(r => r.Description == "Doctor"))
-                .ToList();
-        }
+        //public List<User> GetActiveDoctors()
+        //{
+        //    return cxt.Users
+        //        .Where(u => u.IsActive && u.UserRoles.Any(r => r.Description == "Doctor"))
+        //        .ToList();
+        //}
         public List<UserSelectVM> GetAllActiveUsers()
         {
             return cxt.Users

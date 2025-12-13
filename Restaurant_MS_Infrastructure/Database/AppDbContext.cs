@@ -133,7 +133,7 @@ public partial class AppDbContext : DbContext
     public virtual DbSet<Appsettings> AppSettings { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlServer("Server=DESKTOP-BLPH810\\SQLEXPRESS;Database=GK_Restaurant_3;TrustServerCertificate=True;Trusted_Connection=True;");
+        => optionsBuilder.UseSqlServer("Server=DESKTOP-BLPH810\\SQLEXPRESS;Database=BevPOS;TrustServerCertificate=True;Trusted_Connection=True;");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -792,14 +792,52 @@ public partial class AppDbContext : DbContext
                 .HasForeignKey(d => d.UserId);
         });
 
-        modelBuilder.Entity<User>(entity =>
-        {
-            entity.HasKey(e => e.UserId);
-            entity.Property(e => e.Email).HasMaxLength(600);
+        // Configure User -> UserRoles (many-to-many)
+        modelBuilder.Entity<User>()
+            .HasMany(u => u.UserRoles)           // User has many UserRoles
+            .WithMany(ur => ur.Users)            // UserRole has many Users
+            .UsingEntity<Dictionary<string, object>>(
+                "UserUserRole",                   // Join table name
+                j => j.HasOne<UserRole>().WithMany().HasForeignKey("UserRoleId"),
+                j => j.HasOne<User>().WithMany().HasForeignKey("UserId")
+            );
 
-            entity.HasOne(d => d.AdminShiftSetting).WithMany(p => p.Users)
-                .HasForeignKey(d => d.AdminShiftSettingId);
-        });
+        modelBuilder.Entity<User>()
+            .HasOne(d => d.AdminShiftSetting).WithMany(p => p.Users)
+            .HasForeignKey(d => d.AdminShiftSettingId);
+
+        //modelBuilder.Entity<UserRole>()
+        //.HasKey(ur => new { ur.UserId, ur.RoleId });
+
+        // Configure User -> UserRole relationship
+        //modelBuilder.Entity<UserRole>()
+        //.HasOne(ur => ur.User)
+        //.WithMany(u => u.UserRoles)
+        //.HasForeignKey(ur => ur.UserId)
+        //.OnDelete(DeleteBehavior.Cascade);
+
+        //// Configure Role -> UserRole relationship
+        //modelBuilder.Entity<UserRole>()
+        //    .HasOne(ur => ur.Role)
+        //    .WithMany(r => r.UserRoles)
+        //    .HasForeignKey(ur => ur.RoleId)
+        //    .OnDelete(DeleteBehavior.Cascade);
+
+
+
+        //modelBuilder.Entity<User>(entity =>
+        //{
+        //    entity.HasKey(e => e.UserId);
+        //    entity.Property(e => e.Email).HasMaxLength(600);
+
+
+        //    entity.HasMany(u => u.UserRoles)
+        //    .WithOne()
+        //    .OnDelete(DeleteBehavior.ClientSetNull);
+
+        //    entity.HasOne(d => d.AdminShiftSetting).WithMany(p => p.Users)
+        //        .HasForeignKey(d => d.AdminShiftSettingId);
+        //});
 
         modelBuilder.Entity<UserPermission>(entity =>
         {
@@ -810,16 +848,9 @@ public partial class AppDbContext : DbContext
                 .OnDelete(DeleteBehavior.ClientSetNull);
         });
 
-        modelBuilder.Entity<UserRole>(entity =>
-        {
-            entity.HasKey(e => e.UserRoleId);
-
-            entity.HasOne(d => d.User)
-            .WithMany(p => p.UserRoles)
-                .HasForeignKey(d => d.UserId)
-                .OnDelete(DeleteBehavior.ClientSetNull);
-
-        });
+        // modelBuilder.Entity<User>()
+        //.HasMany(u => u.UserRoles)
+        //.WithMany(r => r.Users);
 
         modelBuilder.Entity<campaign>(entity =>
         {

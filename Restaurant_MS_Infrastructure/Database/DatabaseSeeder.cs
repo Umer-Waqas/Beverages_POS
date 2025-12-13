@@ -14,12 +14,31 @@ namespace Restaurant_MS_Infrastructure.Database
             try
             {
                 context.Database.EnsureCreated();
-
                 // Run seeders in order (respect foreign key dependencies)
-                UsersSeeder.Seed(context);
-                AdminPractiseSettingsSeeder.Seed(context);
 
-                //Add another seeder just above this line
+
+
+                UsersSeeder.Seed(context);
+                RolesSeeder.Seed(context);
+                RightsSeeder.Seed(context);
+                AdminInvoiceSettingsSeeder.Seed(context);
+                AdminPharmacySettingsSeeder.Seed(context);
+                AdminPractiseSettingsSeeder.Seed(context);
+                context.SaveChanges();
+                AdminPrintFormatSettingsSeeder.Seed(context);
+                context.SaveChanges();
+                AdminProcedureInvoiceSettingsSeeder.Seed(context);
+                context.SaveChanges();
+                AdminShiftMasterSettingsSeeder.Seed(context);
+                context.SaveChanges();
+                AdminShiftSettingsSeeder.Seed(context);
+                context.SaveChanges();
+                DefaultItemsSeeder.Seed(context);
+                context.SaveChanges();
+                HwDatasSeeder.Seed(context);
+
+                context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT UserRoles ON");
+                context.SaveChanges();
 
                 Console.WriteLine("Database seeding completed successfully.");
             }

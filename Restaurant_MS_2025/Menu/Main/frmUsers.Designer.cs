@@ -550,7 +550,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(78, 20);
             this.label4.TabIndex = 104;
-            this.label4.Text = "All Users";
+            this.label4.Text = "All UserRoles";
             // 
             // label3
             // 
@@ -560,7 +560,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(54, 20);
             this.label3.TabIndex = 105;
-            this.label3.Text = "Users";
+            this.label3.Text = "UserRoles";
             // 
             // panel1
             // 
@@ -643,7 +643,7 @@
             this.Controls.Add(this.btnAddUser);
             this.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "frmUsers";
-            this.Text = "Users";
+            this.Text = "UserRoles";
             this.Load += new System.EventHandler(this.frmUsers_Load);
             this.tabUsers.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdAdmins)).EndInit();
