@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -80,7 +81,26 @@ namespace Restaurant_MS_Infrastructure.Database.Seed
                 }
             };
 
-                context.AdminShiftSettings.AddRange(shiftSettings);
+
+                var connection = context.Database.GetDbConnection();
+                if (connection.State == ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
+                context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT AdminShiftSettings ON");
+
+                try
+                {
+                    context.AdminShiftSettings.AddRange(shiftSettings);
+                    context.SaveChanges();
+                    Console.WriteLine("AdminShiftSettings seeded successfully!");
+                }
+                catch (Exception ex)
+                { }
+                finally
+                {
+                    context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT AdminShiftSettings OFF");
+                }
                 Console.WriteLine("AdminShiftSettings seeded successfully!");
             }
             else

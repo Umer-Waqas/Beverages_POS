@@ -53,7 +53,7 @@ namespace Restaurant_MS_UI.App
                         //f.Show();             
                         using (UnitOfWork uw = new UnitOfWork())
                         {
-                            uw.AppSettingsRepository.SaveNewAppSetting("Activated", "true");
+                            uw.AppSettingsRepository.SaveAppSetting(AppSettingKeys.SystemIdentifier, SystemIdentifier.GetSystemFingerprint());
                             uw.Save();
                         }
 

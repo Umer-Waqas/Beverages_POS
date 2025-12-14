@@ -33,7 +33,8 @@ namespace Restaurant_MS_UI.App
                 {
                     LoadConfigurations(uw);
                     HwData objHw = uw.HwDataRepository.GetAll().OrderByDescending(r => r.HwDataId).FirstOrDefault();
-                    if (string.IsNullOrEmpty(objHw.SystemExpiry))
+
+                    if (objHw == null || string.IsNullOrEmpty(objHw.SystemExpiry))
                     {
                         crashSystem = true;
                     }
@@ -103,7 +104,13 @@ namespace Restaurant_MS_UI.App
             try
             {
                 string Status = "";// CryptopEngine.Decrypt(Properties.Settings.Default.Activated.ToString(), GlobalSharing.Salt);
-                if (!string.IsNullOrEmpty(Status) && Convert.ToBoolean(Status))
+
+                using UnitOfWork uw = new UnitOfWork();
+                var settingKey = AppSettingKeys.SystemIdentifier;
+                var systemIdentifier = SystemIdentifier.GetSystemFingerprint();
+                var ActivationSetting = uw.AppSettingsRepository.GetAppSetting(settingKey);
+
+                if (ActivationSetting != null && ActivationSetting == systemIdentifier)
                 {
                     return true;
                 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,7 +33,27 @@ namespace Restaurant_MS_Infrastructure.Database.Seed
                     PrintPractiseName = false,
                     InvoiceNote = string.Empty  // Empty string instead of null
                 };
-                context.AdminProcedureInvoiceSettings.Add(procedureInvoiceSetting);
+
+
+                var connection = context.Database.GetDbConnection();
+                if (connection.State == ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
+                context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT AdminProcedureInvoiceSettings ON");
+
+                try
+                {
+                    context.AdminProcedureInvoiceSettings.Add(procedureInvoiceSetting);
+                    context.SaveChanges();
+                    Console.WriteLine("AdminProcedureInvoiceSettings seeded successfully!");
+                }
+                catch (Exception ex)
+                { }
+                finally
+                {
+                    context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT AdminProcedureInvoiceSettings OFF");
+                }
                 Console.WriteLine("AdminProcedureInvoiceSettings seeded successfully!");
             }
         }

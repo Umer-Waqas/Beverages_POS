@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -49,7 +50,28 @@ namespace Restaurant_MS_Infrastructure.Database.Seed
                     CheckStockOnSale = null,
                     ItemTypeId = 1
                 };
-                context.Items.Add(item);
+
+
+                var connection = context.Database.GetDbConnection();
+                if (connection.State == ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
+                context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT Items ON");
+
+                try
+                {
+                    context.Items.Add(item);
+                    context.SaveChanges();
+                    Console.WriteLine("Items seeded successfully!");
+                }
+                catch (Exception ex)
+                { }
+                finally
+                {
+                    context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT Items OFF");
+                }
+                
                 Console.WriteLine("Items seeded successfully!");
             }
             else

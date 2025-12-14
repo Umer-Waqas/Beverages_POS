@@ -27,7 +27,7 @@ namespace Restaurant_MS_2025
                 using var context = new AppDbContext();
 
                 // 1. Apply pending migrations (creates/updates database schema)
-                context.Database.Migrate();
+                //context.Database.Migrate();
 
                 // 2. Run seed data
                 DatabaseSeeder.Seed(context);

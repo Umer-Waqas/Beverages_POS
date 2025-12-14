@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Restaurant_MS_Core.Entities;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,8 +14,7 @@ namespace Restaurant_MS_Infrastructure.Database.Seed
         {
             if (!context.Rights.Any())
             {
-                context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT Rights OFF");
-                context.SaveChanges();
+
 
                 var rights = new List<Right>
             {
@@ -35,11 +36,27 @@ namespace Restaurant_MS_Infrastructure.Database.Seed
                 new Right {RightId = 16, Description = "Edit Invoice Retail Price" }
             };
 
-                context.Rights.AddRange(rights);
+                var connection = context.Database.GetDbConnection();
+                if (connection.State == ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
+                context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT Rights ON");
 
-                context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT Rights OFF");
-                context.SaveChanges();
-                Console.WriteLine("Rights seeded successfully!");
+                try
+                {
+                    context.Rights.AddRange(rights);
+                    context.SaveChanges();
+                    Console.WriteLine("Rights seeded successfully!");
+                }
+                catch (Exception ex)
+                {
+
+                }
+                finally
+                {
+                    context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT Rights OFF");
+                }
             }
             else
             {

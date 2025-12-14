@@ -12,35 +12,39 @@ namespace Restaurant_MS_UI.App
             InitializeComponent();
             unitOfWork = new UnitOfWork();
         }
-        //private Tuple<bool, string, string> IsPasswordRemembered()
-        //{
-            //bool Rem = Properties.Settings.Default.IsSavePassword;
-            //string userName = Properties.Settings.Default.UserName;
-            //string pswd = Properties.Settings.Default.Password;
-            //if (Rem && !string.IsNullOrEmpty(userName) && !string.IsNullOrEmpty(pswd))
-            //{
-            //    string UserName = "";
-            //    string Password = "";
-            //    try
-            //    {
-            //        UserName = CryptopEngine.Decrypt(Properties.Settings.Default.UserName, GlobalSharing.Salt);
-            //        Password = CryptopEngine.Decrypt(Properties.Settings.Default.Password, GlobalSharing.Salt);
-            //        return new Tuple<bool, string, string>(true, UserName, Password);
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        return new Tuple<bool, string, string>(false, "", "");
-            //    }
-           // }
-            //else
-            //{
-            //    return new Tuple<bool, string, string>(false, "", "");
-            //}
-       /// <summary>
-       /// }
-       /// </summary>
-       /// <param name="sender"></param>
-       /// <param name="e"></param>
+        private Tuple<bool, string, string> IsPasswordRemembered()
+        {
+            using UnitOfWork unitOfWork = new UnitOfWork();
+            var RememberUserCredentialsSetting = unitOfWork.AppSettingsRepository.GetAppSetting(AppSettingKeys.RememberUserCredentials);
+            var RememberUserNameSetting = unitOfWork.AppSettingsRepository.GetAppSetting(AppSettingKeys.RememberUserName);
+            var RememberUserPasswordSetting = unitOfWork.AppSettingsRepository.GetAppSetting(AppSettingKeys.RememberUserPassword);
+
+
+            if (RememberUserCredentialsSetting == "true" && !string.IsNullOrEmpty(RememberUserNameSetting) && !string.IsNullOrEmpty(RememberUserPasswordSetting))
+            {
+                string UserName = "";
+                string Password = "";
+                try
+                {
+                    UserName = RememberUserNameSetting;
+                    Password = RememberUserPasswordSetting;
+                    return new Tuple<bool, string, string>(true, UserName, Password);
+                }
+                catch (Exception ex)
+                {
+                    return new Tuple<bool, string, string>(false, "", "");
+                }
+            }
+            else
+            {
+                return new Tuple<bool, string, string>(false, "", "");
+            }
+        }
+        /// <summary>
+        /// }
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnLogin_Click(object sender, EventArgs e)
         {
             try
@@ -53,13 +57,55 @@ namespace Restaurant_MS_UI.App
                 SharedVariables.LoggedInUser = unitOfWork.UserRepository.IsLoggedIn(UserName, Password);
                 if (chkRememberMe.Checked && SharedVariables.LoggedInUser != null)
                 {
-                    //Properties.Settings.Default.IsSavePassword = true;
-                    //Properties.Settings.Default.UserName = CryptopEngine.Encrypt(SharedVariables.LoggedInUser.Email, GlobalSharing.Salt);
-                    //Properties.Settings.Default.Password = CryptopEngine.Encrypt(SharedVariables.LoggedInUser.Password, GlobalSharing.Salt);
+                    using UnitOfWork unitOfWork = new UnitOfWork();
+                    var rememberSetting = new Appsettings()
+                    {
+                        Key = AppSettingKeys.RememberUserCredentials,
+                        Value = "true"
+                    };
+                    unitOfWork.AppSettingsRepository.SaveAppSetting(rememberSetting);
+
+
+                    var rememberSettingUserName = new Appsettings()
+                    {
+                        Key = AppSettingKeys.RememberUserName,
+                        Value = SharedVariables.LoggedInUser.Email,
+                    };
+                    unitOfWork.AppSettingsRepository.SaveAppSetting(rememberSettingUserName);
+
+
+                    var rememberSettingPassword = new Appsettings()
+                    {
+                        Key = AppSettingKeys.RememberUserPassword,
+                        Value = SharedVariables.LoggedInUser.Password
+                    };
+                    unitOfWork.AppSettingsRepository.SaveAppSetting(rememberSettingPassword);
                 }
                 else
                 {
-                    //Properties.Settings.Default.IsSavePassword = false;
+                    using UnitOfWork unitOfWork = new UnitOfWork();
+                    var rememberSetting = new Appsettings()
+                    {
+                        Key = AppSettingKeys.RememberUserCredentials,
+                        Value = "false"
+                    };
+                    unitOfWork.AppSettingsRepository.SaveAppSetting(rememberSetting);
+
+
+                    var rememberSettingUserName = new Appsettings()
+                    {
+                        Key = AppSettingKeys.RememberUserName,
+                        Value = "",
+                    };
+                    unitOfWork.AppSettingsRepository.SaveAppSetting(rememberSettingUserName);
+
+
+                    var rememberSettingPassword = new Appsettings()
+                    {
+                        Key = AppSettingKeys.RememberUserPassword,
+                        Value = ""
+                    };
+                    unitOfWork.AppSettingsRepository.SaveAppSetting(rememberSettingPassword);
                 }
                 //Properties.Settings.Default.Save();
                 if (SharedVariables.LoggedInUser == null)
@@ -124,13 +170,13 @@ namespace Restaurant_MS_UI.App
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-            //var Result = IsPasswordRemembered();
-            //if (Result.Item1)
-            //{
-            //    txtUserName.Text = Result.Item2;
-            //    txtPassword.Text = Result.Item3;
-            //    chkRememberMe.Checked = true;
-            //}
+            var Result = IsPasswordRemembered();
+            if (Result.Item1)
+            {
+                txtUserName.Text = Result.Item2;
+                txtPassword.Text = Result.Item3;
+                chkRememberMe.Checked = true;
+            }
         }
     }
 }

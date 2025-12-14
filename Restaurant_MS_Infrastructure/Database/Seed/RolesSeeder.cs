@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Restaurant_MS_Core.Entities;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,9 +12,6 @@ namespace Restaurant_MS_Infrastructure.Database.Seed
     {
         public static void Seed(AppDbContext context)
         {
-            context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT UserRoles ON");
-            context.SaveChanges();
-
             if (!context.UserRoles.Any())
             {
                 var userRoles = new List<UserRole>
@@ -47,10 +46,28 @@ namespace Restaurant_MS_Infrastructure.Database.Seed
                     }
                 };
 
-                context.UserRoles.AddRange(userRoles);
 
-                context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT UserRoles OFF");
-                context.SaveChanges();
+                var connection = context.Database.GetDbConnection();
+                if (connection.State == ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
+                context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT UserRoles ON");
+
+                try
+                {
+                    context.UserRoles.AddRange(userRoles);
+                    context.SaveChanges();
+                    Console.WriteLine("Users seeded successfully!");
+                }
+                catch (Exception ex)
+                {
+
+                }
+                finally
+                {
+                    context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT UserRoles OFF");
+                }
                 Console.WriteLine("UserRoles seeded successfully!");
             }
             else

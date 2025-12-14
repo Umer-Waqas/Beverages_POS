@@ -14,33 +14,56 @@ namespace Restaurant_MS_Infrastructure.Repository
             this.cxt = cxt;
         }
 
-        public bool SaveNewAppSetting(string key, string value)
+        public bool SaveAppSetting(string key, string value)
         {
             string encKey = CryptopEngine.Encrypt(key, GlobalSharing.Salt);
             string encVal = CryptopEngine.Encrypt(value, GlobalSharing.Salt);
+
+            Appsettings? exSetting = cxt.AppSettings.FirstOrDefault(s => s.Key == encKey);
+            if (exSetting != null)
+            {
+
+                if (exSetting != null)
+                {
+                    exSetting.Value = encVal;
+                    cxt.AppSettings.Update(exSetting);
+                    cxt.SaveChanges();
+                }
+                return true;
+            }
 
             Appsettings setting = new Appsettings();
             setting.Key = encKey;
             setting.Value = encVal;
 
             cxt.AppSettings.Add(setting);
+            cxt.SaveChanges();
             return true;
         }
 
-        public bool UpdateAppSetting(int Id, string key, string value)
+        public bool SaveAppSetting(Appsettings settings)
         {
-            //string encKey = CryptopEngine.Encrypt(key, GlobalSharing.Salt);
-            string encVal = CryptopEngine.Encrypt(value, GlobalSharing.Salt);
+            string encKey = CryptopEngine.Encrypt(settings.Key, GlobalSharing.Salt);
+            string encVal = CryptopEngine.Encrypt(settings.Value, GlobalSharing.Salt);
 
-            Appsettings? setting = cxt.AppSettings.FirstOrDefault(s => s.Id == Id);
-            if (setting != null)
+            Appsettings? exSetting = cxt.AppSettings.FirstOrDefault(s => s.Key == encKey);
+            if (exSetting != null)
             {
-                setting.Value = encVal;
-                cxt.AppSettings.Update(setting);
-                cxt.SaveChanges();
+                if (exSetting != null)
+                {
+                    exSetting.Value = encVal;
+                    cxt.AppSettings.Update(exSetting);
+                    cxt.SaveChanges();
+                }
+                return true;
             }
 
+            Appsettings setting = new Appsettings();
+            setting.Key = encKey;
+            setting.Value = encVal;
 
+            cxt.AppSettings.Add(setting);
+            cxt.SaveChanges();
             return true;
         }
 

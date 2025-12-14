@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,7 +30,28 @@ namespace Restaurant_MS_Infrastructure.Database.Seed
                     PracticeType = "POS"
                 };
 
-                context.AdminPractiseSettings.Add(practiseSetting);
+
+                var connection = context.Database.GetDbConnection();
+                if (connection.State == ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
+                context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT AdminPractiseSettings ON");
+
+                try
+                {
+                    context.AdminPractiseSettings.Add(practiseSetting);
+                    context.SaveChanges();
+                    Console.WriteLine("AdminPractiseSettings seeded successfully!");
+                }
+                catch (Exception ex)
+                {
+
+                }
+                finally
+                {
+                    context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT AdminPractiseSettings OFF");
+                }
                 Console.WriteLine("AdminPractiseSettings seeded successfully!");
             }
             else

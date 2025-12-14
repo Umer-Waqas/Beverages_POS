@@ -57,25 +57,11 @@ namespace Restaurant_MS_Infrastructure.Database.Seed
                 };
 
                 var connection = context.Database.GetDbConnection();
-                var wasClosed = connection.State == ConnectionState.Closed;
-
-                if (wasClosed)
+                if (connection.State == ConnectionState.Closed)
                 {
                     connection.Open();
                 }
                 context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT Users ON");
-
-                //using var transaction = connection.BeginTransaction();
-                //context.Database.UseTransaction(transaction);
-
-                // Step 1: Turn ON IDENTITY_INSERT using the SAME connection
-                //using (var cmd = connection.CreateCommand())
-                //{
-                //    cmd.Transaction = transaction;
-                //    cmd.CommandText = "SET IDENTITY_INSERT Users ON";
-                //    cmd.ExecuteNonQuery();
-                //    Console.WriteLine("IDENTITY_INSERT ON executed successfully.");
-                //}
 
                 try
                 {
