@@ -25,6 +25,7 @@ namespace Restaurant_MS_UI.App
             try
             {
                 bool crashSystem = false;
+                bool ExpiryReached = false;
                 t.Stop();
                 SharedVariables.SqlConnectionString = SharedFunctions.GetConnectionString();
                 SharedVariables.IsApplicationStarted = true;
@@ -44,17 +45,17 @@ namespace Restaurant_MS_UI.App
                         bool parsed = DateTime.TryParse(CryptopEngine.Decrypt(objHw.SystemExpiry.ToString(), GlobalSharing.Salt), out dtExp);
                         if (!parsed)
                         {
-                            crashSystem = true;
+                            ExpiryReached = true;
                         }
                         else
                         {
                             if (DateTime.Now.Date < dtExp)
                             {
-                                crashSystem = false;
+                                ExpiryReached = false;
                             }
                             else
                             {
-                                crashSystem = true;
+                                ExpiryReached = true;
                             }
                         }
                     }
@@ -65,19 +66,24 @@ namespace Restaurant_MS_UI.App
                     MessageBox.Show("System Crashed and stopped working, please contact Giga Keys Solutions for further processing.", "System Crashed", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     Application.Exit();
                 }
-                this.Invoke(new Action(() =>
+                else if(ExpiryReached)
                 {
-                    this.Hide();
-                    if (IsApplicationActivated())
+                    MessageBox.Show("System subscription has been expired. Please contact service provide.", "System Subscription Expired", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    Application.Exit();
+                }
+                    this.Invoke(new Action(() =>
                     {
-                        new frmMain().Show();
-                    }
-                    else
-                    {
-                        new ActivationForm().Show();
-                    }
+                        this.Hide();
+                        if (IsApplicationActivated())
+                        {
+                            new frmMain().Show();
+                        }
+                        else
+                        {
+                            new ActivationForm().Show();
+                        }
 
-                }));
+                    }));
 
             }
             catch (Exception ex)
