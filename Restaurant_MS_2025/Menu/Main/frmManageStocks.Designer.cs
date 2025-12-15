@@ -28,602 +28,618 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmManageStocks));
-            this.flowPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.colItemId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colUnitCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colToalCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colRetailPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colBatch = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDiscount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colSalesTax = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNetValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCreatedAt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnRefresh = new System.Windows.Forms.Button();
-            this.btnAddNewStock = new System.Windows.Forms.Button();
-            this.btnPrint = new System.Windows.Forms.Button();
-            this.btnExcel = new System.Windows.Forms.Button();
-            this.dlgSaveExcel = new System.Windows.Forms.SaveFileDialog();
-            this.lblTo = new System.Windows.Forms.Label();
-            this.lblFrom = new System.Windows.Forms.Label();
-            this.dtpTo = new System.Windows.Forms.DateTimePicker();
-            this.dtpFrom = new System.Windows.Forms.DateTimePicker();
-            this.txtSearchByName = new System.Windows.Forms.TextBox();
-            this.cmbSuppliers = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pbInfo = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.txtGotoPage = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.btnLastPage = new System.Windows.Forms.Button();
-            this.btnFirstPage = new System.Windows.Forms.Button();
-            this.btnNext = new System.Windows.Forms.Button();
-            this.lblPageNo = new System.Windows.Forms.Label();
-            this.btnPrevious = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            //this.line1 = new DevComponents.DotNetBar.Controls.Line();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.flowPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbInfo)).BeginInit();
-            this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.SuspendLayout();
+            ComponentResourceManager resources = new ComponentResourceManager(typeof(frmManageStocks));
+            flowPanel = new FlowLayoutPanel();
+            panel3 = new Panel();
+            dataGridView1 = new DataGridView();
+            colItemId = new DataGridViewTextBoxColumn();
+            colItemName = new DataGridViewTextBoxColumn();
+            colQuantity = new DataGridViewTextBoxColumn();
+            colUnitCost = new DataGridViewTextBoxColumn();
+            colToalCost = new DataGridViewTextBoxColumn();
+            colRetailPrice = new DataGridViewTextBoxColumn();
+            colBatch = new DataGridViewTextBoxColumn();
+            colDiscount = new DataGridViewTextBoxColumn();
+            colSalesTax = new DataGridViewTextBoxColumn();
+            colNetValue = new DataGridViewTextBoxColumn();
+            colCreatedAt = new DataGridViewTextBoxColumn();
+            btnRefresh = new Button();
+            btnAddNewStock = new Button();
+            btnPrint = new Button();
+            btnExcel = new Button();
+            dlgSaveExcel = new SaveFileDialog();
+            lblTo = new Label();
+            lblFrom = new Label();
+            dtpTo = new DateTimePicker();
+            dtpFrom = new DateTimePicker();
+            txtSearchByName = new TextBox();
+            cmbSuppliers = new ComboBox();
+            label2 = new Label();
+            label3 = new Label();
+            pbInfo = new PictureBox();
+            panel2 = new Panel();
+            panel1 = new Panel();
+            txtGotoPage = new TextBox();
+            label6 = new Label();
+            btnLastPage = new Button();
+            btnFirstPage = new Button();
+            btnNext = new Button();
+            lblPageNo = new Label();
+            btnPrevious = new Button();
+            label5 = new Label();
+            label4 = new Label();
+            label1 = new Label();
+            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn7 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn8 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn9 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn10 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn11 = new DataGridViewTextBoxColumn();
+            flowPanel.SuspendLayout();
+            panel3.SuspendLayout();
+            ((ISupportInitialize)dataGridView1).BeginInit();
+            ((ISupportInitialize)pbInfo).BeginInit();
+            panel2.SuspendLayout();
+            panel1.SuspendLayout();
+            SuspendLayout();
             // 
             // flowPanel
             // 
-            this.flowPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowPanel.AutoScroll = true;
-            this.flowPanel.BackColor = System.Drawing.Color.White;
-            this.flowPanel.Controls.Add(this.dataGridView1);
-            this.flowPanel.Location = new System.Drawing.Point(3, 28);
-            this.flowPanel.Name = "flowPanel";
-            this.flowPanel.Size = new System.Drawing.Size(1270, 375);
-            this.flowPanel.TabIndex = 9;
-            this.flowPanel.SizeChanged += new System.EventHandler(this.flowPanel_SizeChanged);
-            this.flowPanel.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.flowPanel_ControlAdded);
-            this.flowPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.flowPanel_Paint);
+            flowPanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            flowPanel.AutoScroll = true;
+            flowPanel.BackColor = Color.White;
+            flowPanel.Controls.Add(panel3);
+            flowPanel.Location = new Point(3, 28);
+            flowPanel.Name = "flowPanel";
+            flowPanel.Size = new Size(1497, 443);
+            flowPanel.TabIndex = 9;
+            flowPanel.SizeChanged += flowPanel_SizeChanged;
+            flowPanel.ControlAdded += flowPanel_ControlAdded;
+            flowPanel.Paint += flowPanel_Paint;
+            // 
+            // panel3
+            // 
+            panel3.Controls.Add(dataGridView1);
+            panel3.Location = new Point(3, 3);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(1264, 213);
+            panel3.TabIndex = 13;
             // 
             // dataGridView1
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeight = 35;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colItemId,
-            this.colItemName,
-            this.colQuantity,
-            this.colUnitCost,
-            this.colToalCost,
-            this.colRetailPrice,
-            this.colBatch,
-            this.colDiscount,
-            this.colSalesTax,
-            this.colNetValue,
-            this.colCreatedAt});
-            this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowTemplate.Height = 35;
-            this.dataGridView1.Size = new System.Drawing.Size(1264, 162);
-            this.dataGridView1.TabIndex = 12;
-            this.dataGridView1.Visible = false;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            dataGridView1.BackgroundColor = Color.White;
+            dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridView1.ColumnHeadersHeight = 35;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { colItemId, colItemName, colQuantity, colUnitCost, colToalCost, colRetailPrice, colBatch, colDiscount, colSalesTax, colNetValue, colCreatedAt });
+            dataGridView1.EnableHeadersVisualStyles = false;
+            dataGridView1.Location = new Point(3, 51);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.RowTemplate.Height = 35;
+            dataGridView1.Size = new Size(1257, 162);
+            dataGridView1.TabIndex = 12;
+            dataGridView1.Visible = false;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // colItemId
             // 
-            this.colItemId.HeaderText = "ItemId";
-            this.colItemId.Name = "colItemId";
-            this.colItemId.ReadOnly = true;
+            colItemId.HeaderText = "ItemId";
+            colItemId.MinimumWidth = 6;
+            colItemId.Name = "colItemId";
+            colItemId.ReadOnly = true;
+            colItemId.Width = 125;
             // 
             // colItemName
             // 
-            this.colItemName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colItemName.HeaderText = "Item";
-            this.colItemName.Name = "colItemName";
-            this.colItemName.ReadOnly = true;
+            colItemName.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            colItemName.HeaderText = "Item";
+            colItemName.MinimumWidth = 6;
+            colItemName.Name = "colItemName";
+            colItemName.ReadOnly = true;
             // 
             // colQuantity
             // 
-            this.colQuantity.HeaderText = "Quantity";
-            this.colQuantity.Name = "colQuantity";
-            this.colQuantity.ReadOnly = true;
+            colQuantity.HeaderText = "Quantity";
+            colQuantity.MinimumWidth = 6;
+            colQuantity.Name = "colQuantity";
+            colQuantity.ReadOnly = true;
+            colQuantity.Width = 125;
             // 
             // colUnitCost
             // 
-            this.colUnitCost.HeaderText = "UnitCost";
-            this.colUnitCost.Name = "colUnitCost";
-            this.colUnitCost.ReadOnly = true;
+            colUnitCost.HeaderText = "UnitCost";
+            colUnitCost.MinimumWidth = 6;
+            colUnitCost.Name = "colUnitCost";
+            colUnitCost.ReadOnly = true;
+            colUnitCost.Width = 125;
             // 
             // colToalCost
             // 
-            this.colToalCost.HeaderText = "Total Cost";
-            this.colToalCost.Name = "colToalCost";
-            this.colToalCost.ReadOnly = true;
+            colToalCost.HeaderText = "Total Cost";
+            colToalCost.MinimumWidth = 6;
+            colToalCost.Name = "colToalCost";
+            colToalCost.ReadOnly = true;
+            colToalCost.Width = 125;
             // 
             // colRetailPrice
             // 
-            this.colRetailPrice.HeaderText = "Retail Price";
-            this.colRetailPrice.Name = "colRetailPrice";
-            this.colRetailPrice.ReadOnly = true;
+            colRetailPrice.HeaderText = "Retail Price";
+            colRetailPrice.MinimumWidth = 6;
+            colRetailPrice.Name = "colRetailPrice";
+            colRetailPrice.ReadOnly = true;
+            colRetailPrice.Width = 125;
             // 
             // colBatch
             // 
-            this.colBatch.HeaderText = "Batch";
-            this.colBatch.Name = "colBatch";
-            this.colBatch.ReadOnly = true;
+            colBatch.HeaderText = "Batch";
+            colBatch.MinimumWidth = 6;
+            colBatch.Name = "colBatch";
+            colBatch.ReadOnly = true;
+            colBatch.Width = 125;
             // 
             // colDiscount
             // 
-            this.colDiscount.HeaderText = "Discount";
-            this.colDiscount.Name = "colDiscount";
-            this.colDiscount.ReadOnly = true;
+            colDiscount.HeaderText = "Discount";
+            colDiscount.MinimumWidth = 6;
+            colDiscount.Name = "colDiscount";
+            colDiscount.ReadOnly = true;
+            colDiscount.Width = 125;
             // 
             // colSalesTax
             // 
-            this.colSalesTax.HeaderText = "Sales Tax";
-            this.colSalesTax.Name = "colSalesTax";
-            this.colSalesTax.ReadOnly = true;
+            colSalesTax.HeaderText = "Sales Tax";
+            colSalesTax.MinimumWidth = 6;
+            colSalesTax.Name = "colSalesTax";
+            colSalesTax.ReadOnly = true;
+            colSalesTax.Width = 125;
             // 
             // colNetValue
             // 
-            this.colNetValue.HeaderText = "Net Value";
-            this.colNetValue.Name = "colNetValue";
-            this.colNetValue.ReadOnly = true;
+            colNetValue.HeaderText = "Net Value";
+            colNetValue.MinimumWidth = 6;
+            colNetValue.Name = "colNetValue";
+            colNetValue.ReadOnly = true;
+            colNetValue.Width = 125;
             // 
             // colCreatedAt
             // 
-            this.colCreatedAt.HeaderText = "Create At";
-            this.colCreatedAt.Name = "colCreatedAt";
-            this.colCreatedAt.ReadOnly = true;
+            colCreatedAt.HeaderText = "Create At";
+            colCreatedAt.MinimumWidth = 6;
+            colCreatedAt.Name = "colCreatedAt";
+            colCreatedAt.ReadOnly = true;
+            colCreatedAt.Width = 125;
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
-            this.btnRefresh.Location = new System.Drawing.Point(1149, 5);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(111, 36);
-            this.btnRefresh.TabIndex = 8;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnRefresh.UseVisualStyleBackColor = true;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            btnRefresh.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnRefresh.Image = (Image)resources.GetObject("btnRefresh.Image");
+            btnRefresh.Location = new Point(1376, 5);
+            btnRefresh.Name = "btnRefresh";
+            btnRefresh.Size = new Size(111, 42);
+            btnRefresh.TabIndex = 8;
+            btnRefresh.Text = "Refresh";
+            btnRefresh.TextImageRelation = TextImageRelation.TextBeforeImage;
+            btnRefresh.UseVisualStyleBackColor = true;
+            btnRefresh.Click += btnRefresh_Click;
             // 
             // btnAddNewStock
             // 
-            this.btnAddNewStock.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddNewStock.Location = new System.Drawing.Point(1012, 5);
-            this.btnAddNewStock.Name = "btnAddNewStock";
-            this.btnAddNewStock.Size = new System.Drawing.Size(131, 36);
-            this.btnAddNewStock.TabIndex = 7;
-            this.btnAddNewStock.Text = "Add New Stock";
-            this.btnAddNewStock.UseVisualStyleBackColor = true;
-            this.btnAddNewStock.Click += new System.EventHandler(this.btnAddNewStock_Click);
+            btnAddNewStock.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnAddNewStock.Location = new Point(1239, 5);
+            btnAddNewStock.Name = "btnAddNewStock";
+            btnAddNewStock.Size = new Size(131, 42);
+            btnAddNewStock.TabIndex = 7;
+            btnAddNewStock.Text = "Add New Stock";
+            btnAddNewStock.UseVisualStyleBackColor = true;
+            btnAddNewStock.Click += btnAddNewStock_Click;
             // 
             // btnPrint
             // 
-            this.btnPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPrint.Location = new System.Drawing.Point(949, 5);
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(57, 36);
-            this.btnPrint.TabIndex = 6;
-            this.btnPrint.Text = "Print";
-            this.btnPrint.UseVisualStyleBackColor = true;
-            this.btnPrint.Visible = false;
-            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click_1);
+            btnPrint.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnPrint.Location = new Point(1176, 5);
+            btnPrint.Name = "btnPrint";
+            btnPrint.Size = new Size(57, 42);
+            btnPrint.TabIndex = 6;
+            btnPrint.Text = "Print";
+            btnPrint.UseVisualStyleBackColor = true;
+            btnPrint.Visible = false;
+            btnPrint.Click += btnPrint_Click_1;
             // 
             // btnExcel
             // 
-            this.btnExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExcel.Location = new System.Drawing.Point(886, 5);
-            this.btnExcel.Name = "btnExcel";
-            this.btnExcel.Size = new System.Drawing.Size(57, 36);
-            this.btnExcel.TabIndex = 5;
-            this.btnExcel.Text = "Excel";
-            this.btnExcel.UseVisualStyleBackColor = true;
-            this.btnExcel.Visible = false;
-            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
+            btnExcel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnExcel.Location = new Point(1113, 5);
+            btnExcel.Name = "btnExcel";
+            btnExcel.Size = new Size(57, 42);
+            btnExcel.TabIndex = 5;
+            btnExcel.Text = "Excel";
+            btnExcel.UseVisualStyleBackColor = true;
+            btnExcel.Visible = false;
+            btnExcel.Click += btnExcel_Click;
             // 
             // dlgSaveExcel
             // 
-            this.dlgSaveExcel.FileName = "StocksList";
-            this.dlgSaveExcel.Filter = "Excel|*.xls";
+            dlgSaveExcel.FileName = "StocksList";
+            dlgSaveExcel.Filter = "Excel|*.xls";
             // 
             // lblTo
             // 
-            this.lblTo.AutoSize = true;
-            this.lblTo.Location = new System.Drawing.Point(212, 60);
-            this.lblTo.Name = "lblTo";
-            this.lblTo.Size = new System.Drawing.Size(19, 14);
-            this.lblTo.TabIndex = 21;
-            this.lblTo.Text = "To";
+            lblTo.AutoSize = true;
+            lblTo.Location = new Point(212, 60);
+            lblTo.Name = "lblTo";
+            lblTo.Size = new Size(23, 18);
+            lblTo.TabIndex = 21;
+            lblTo.Text = "To";
             // 
             // lblFrom
             // 
-            this.lblFrom.AutoSize = true;
-            this.lblFrom.Location = new System.Drawing.Point(6, 60);
-            this.lblFrom.Name = "lblFrom";
-            this.lblFrom.Size = new System.Drawing.Size(33, 14);
-            this.lblFrom.TabIndex = 18;
-            this.lblFrom.Text = "From";
+            lblFrom.AutoSize = true;
+            lblFrom.Location = new Point(6, 60);
+            lblFrom.Name = "lblFrom";
+            lblFrom.Size = new Size(40, 18);
+            lblFrom.TabIndex = 18;
+            lblFrom.Text = "From";
             // 
             // dtpTo
             // 
-            this.dtpTo.Location = new System.Drawing.Point(215, 78);
-            this.dtpTo.Name = "dtpTo";
-            this.dtpTo.Size = new System.Drawing.Size(200, 21);
-            this.dtpTo.TabIndex = 2;
-            this.dtpTo.ValueChanged += new System.EventHandler(this.dtpTo_ValueChanged);
+            dtpTo.Location = new Point(215, 78);
+            dtpTo.Name = "dtpTo";
+            dtpTo.Size = new Size(200, 25);
+            dtpTo.TabIndex = 2;
+            dtpTo.ValueChanged += dtpTo_ValueChanged;
             // 
             // dtpFrom
             // 
-            this.dtpFrom.Location = new System.Drawing.Point(9, 78);
-            this.dtpFrom.Name = "dtpFrom";
-            this.dtpFrom.Size = new System.Drawing.Size(200, 21);
-            this.dtpFrom.TabIndex = 1;
-            this.dtpFrom.ValueChanged += new System.EventHandler(this.dtpFrom_ValueChanged);
+            dtpFrom.Location = new Point(9, 78);
+            dtpFrom.Name = "dtpFrom";
+            dtpFrom.Size = new Size(200, 25);
+            dtpFrom.TabIndex = 1;
+            dtpFrom.ValueChanged += dtpFrom_ValueChanged;
             // 
             // txtSearchByName
             // 
-            this.txtSearchByName.Location = new System.Drawing.Point(428, 78);
-            this.txtSearchByName.Name = "txtSearchByName";
-            this.txtSearchByName.Size = new System.Drawing.Size(200, 21);
-            this.txtSearchByName.TabIndex = 3;
-            this.txtSearchByName.TextChanged += new System.EventHandler(this.txtSearchByName_TextChanged);
-            this.txtSearchByName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchByName_KeyDown);
+            txtSearchByName.Location = new Point(428, 78);
+            txtSearchByName.Name = "txtSearchByName";
+            txtSearchByName.Size = new Size(200, 25);
+            txtSearchByName.TabIndex = 3;
+            txtSearchByName.TextChanged += txtSearchByName_TextChanged;
+            txtSearchByName.KeyDown += txtSearchByName_KeyDown;
             // 
             // cmbSuppliers
             // 
-            this.cmbSuppliers.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cmbSuppliers.FormattingEnabled = true;
-            this.cmbSuppliers.Location = new System.Drawing.Point(634, 76);
-            this.cmbSuppliers.Name = "cmbSuppliers";
-            this.cmbSuppliers.Size = new System.Drawing.Size(200, 22);
-            this.cmbSuppliers.TabIndex = 4;
-            this.cmbSuppliers.SelectedIndexChanged += new System.EventHandler(this.cmbSuppliers_SelectedIndexChanged);
+            cmbSuppliers.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cmbSuppliers.FormattingEnabled = true;
+            cmbSuppliers.Location = new Point(634, 76);
+            cmbSuppliers.Name = "cmbSuppliers";
+            cmbSuppliers.Size = new Size(200, 26);
+            cmbSuppliers.TabIndex = 4;
+            cmbSuppliers.SelectedIndexChanged += cmbSuppliers_SelectedIndexChanged;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(428, 60);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 14);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "Search By Item Name";
+            label2.AutoSize = true;
+            label2.Location = new Point(428, 60);
+            label2.Name = "label2";
+            label2.Size = new Size(139, 18);
+            label2.TabIndex = 18;
+            label2.Text = "Search By Item Name";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(634, 60);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 14);
-            this.label3.TabIndex = 18;
-            this.label3.Text = "Search By Supplier";
+            label3.AutoSize = true;
+            label3.Location = new Point(634, 60);
+            label3.Name = "label3";
+            label3.Size = new Size(120, 18);
+            label3.TabIndex = 18;
+            label3.Text = "Search By Supplier";
             // 
             // pbInfo
             // 
-            this.pbInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbInfo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbInfo.Image = ((System.Drawing.Image)(resources.GetObject("pbInfo.Image")));
-            this.pbInfo.Location = new System.Drawing.Point(1274, 34);
-            this.pbInfo.Name = "pbInfo";
-            this.pbInfo.Size = new System.Drawing.Size(29, 30);
-            this.pbInfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pbInfo.TabIndex = 100;
-            this.pbInfo.TabStop = false;
-            this.pbInfo.Click += new System.EventHandler(this.pbInfo_Click);
+            pbInfo.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            pbInfo.Cursor = Cursors.Hand;
+            pbInfo.Image = (Image)resources.GetObject("pbInfo.Image");
+            pbInfo.Location = new Point(1501, 34);
+            pbInfo.Name = "pbInfo";
+            pbInfo.Size = new Size(29, 30);
+            pbInfo.SizeMode = PictureBoxSizeMode.CenterImage;
+            pbInfo.TabIndex = 100;
+            pbInfo.TabStop = false;
+            pbInfo.Click += pbInfo_Click;
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
-            this.panel2.Controls.Add(this.panel1);
-            this.panel2.Controls.Add(this.flowPanel);
-            this.panel2.Location = new System.Drawing.Point(-1, 118);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1273, 444);
-            this.panel2.TabIndex = 101;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            panel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel2.BackColor = Color.FromArgb(246, 246, 246);
+            panel2.Controls.Add(panel1);
+            panel2.Controls.Add(flowPanel);
+            panel2.Location = new Point(-1, 118);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1500, 512);
+            panel2.TabIndex = 101;
+            panel2.Paint += panel2_Paint;
             // 
             // panel1
             // 
-            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.txtGotoPage);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.btnLastPage);
-            this.panel1.Controls.Add(this.btnFirstPage);
-            this.panel1.Controls.Add(this.btnNext);
-            this.panel1.Controls.Add(this.lblPageNo);
-            this.panel1.Controls.Add(this.btnPrevious);
-            this.panel1.Location = new System.Drawing.Point(378, 409);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(514, 31);
-            this.panel1.TabIndex = 16;
+            panel1.Anchor = AnchorStyles.Bottom;
+            panel1.BackColor = Color.White;
+            panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(txtGotoPage);
+            panel1.Controls.Add(label6);
+            panel1.Controls.Add(btnLastPage);
+            panel1.Controls.Add(btnFirstPage);
+            panel1.Controls.Add(btnNext);
+            panel1.Controls.Add(lblPageNo);
+            panel1.Controls.Add(btnPrevious);
+            panel1.Location = new Point(492, 477);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(514, 31);
+            panel1.TabIndex = 16;
             // 
             // txtGotoPage
             // 
-            this.txtGotoPage.Location = new System.Drawing.Point(433, 4);
-            this.txtGotoPage.Name = "txtGotoPage";
-            this.txtGotoPage.Size = new System.Drawing.Size(75, 21);
-            this.txtGotoPage.TabIndex = 1;
-            this.txtGotoPage.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtGotoPage_KeyDown);
-            this.txtGotoPage.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGotoPage_KeyPress);
+            txtGotoPage.Location = new Point(433, 4);
+            txtGotoPage.Name = "txtGotoPage";
+            txtGotoPage.Size = new Size(75, 25);
+            txtGotoPage.TabIndex = 1;
+            txtGotoPage.KeyDown += txtGotoPage_KeyDown;
+            txtGotoPage.KeyPress += txtGotoPage_KeyPress;
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(373, 8);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 14);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "go to page";
+            label6.AutoSize = true;
+            label6.Location = new Point(373, 8);
+            label6.Name = "label6";
+            label6.Size = new Size(75, 18);
+            label6.TabIndex = 0;
+            label6.Text = "go to page";
             // 
             // btnLastPage
             // 
-            this.btnLastPage.BackColor = System.Drawing.Color.White;
-            this.btnLastPage.FlatAppearance.BorderSize = 0;
-            this.btnLastPage.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(152)))), ((int)(((byte)(210)))));
-            this.btnLastPage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLastPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLastPage.ForeColor = System.Drawing.Color.Black;
-            this.btnLastPage.Location = new System.Drawing.Point(333, 2);
-            this.btnLastPage.Name = "btnLastPage";
-            this.btnLastPage.Size = new System.Drawing.Size(35, 25);
-            this.btnLastPage.TabIndex = 11;
-            this.btnLastPage.Text = ">>";
-            this.btnLastPage.UseVisualStyleBackColor = false;
-            this.btnLastPage.Click += new System.EventHandler(this.btnLastPage_Click);
+            btnLastPage.BackColor = Color.White;
+            btnLastPage.FlatAppearance.BorderSize = 0;
+            btnLastPage.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 152, 210);
+            btnLastPage.FlatStyle = FlatStyle.Flat;
+            btnLastPage.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLastPage.ForeColor = Color.Black;
+            btnLastPage.Location = new Point(333, 2);
+            btnLastPage.Name = "btnLastPage";
+            btnLastPage.Size = new Size(35, 25);
+            btnLastPage.TabIndex = 11;
+            btnLastPage.Text = ">>";
+            btnLastPage.UseVisualStyleBackColor = false;
+            btnLastPage.Click += btnLastPage_Click;
             // 
             // btnFirstPage
             // 
-            this.btnFirstPage.BackColor = System.Drawing.Color.White;
-            this.btnFirstPage.FlatAppearance.BorderSize = 0;
-            this.btnFirstPage.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(152)))), ((int)(((byte)(210)))));
-            this.btnFirstPage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFirstPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFirstPage.ForeColor = System.Drawing.Color.Black;
-            this.btnFirstPage.Location = new System.Drawing.Point(26, 2);
-            this.btnFirstPage.Name = "btnFirstPage";
-            this.btnFirstPage.Size = new System.Drawing.Size(33, 25);
-            this.btnFirstPage.TabIndex = 14;
-            this.btnFirstPage.Text = "<<";
-            this.btnFirstPage.UseVisualStyleBackColor = false;
-            this.btnFirstPage.Click += new System.EventHandler(this.btnFirstPage_Click);
+            btnFirstPage.BackColor = Color.White;
+            btnFirstPage.FlatAppearance.BorderSize = 0;
+            btnFirstPage.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 152, 210);
+            btnFirstPage.FlatStyle = FlatStyle.Flat;
+            btnFirstPage.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnFirstPage.ForeColor = Color.Black;
+            btnFirstPage.Location = new Point(26, 2);
+            btnFirstPage.Name = "btnFirstPage";
+            btnFirstPage.Size = new Size(33, 25);
+            btnFirstPage.TabIndex = 14;
+            btnFirstPage.Text = "<<";
+            btnFirstPage.UseVisualStyleBackColor = false;
+            btnFirstPage.Click += btnFirstPage_Click;
             // 
             // btnNext
             // 
-            this.btnNext.BackColor = System.Drawing.Color.White;
-            this.btnNext.Enabled = false;
-            this.btnNext.FlatAppearance.BorderSize = 0;
-            this.btnNext.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(152)))), ((int)(((byte)(210)))));
-            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNext.ForeColor = System.Drawing.Color.Black;
-            this.btnNext.Location = new System.Drawing.Point(302, 2);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(27, 25);
-            this.btnNext.TabIndex = 10;
-            this.btnNext.Text = "> ";
-            this.btnNext.UseVisualStyleBackColor = false;
-            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            btnNext.BackColor = Color.White;
+            btnNext.Enabled = false;
+            btnNext.FlatAppearance.BorderSize = 0;
+            btnNext.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 152, 210);
+            btnNext.FlatStyle = FlatStyle.Flat;
+            btnNext.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnNext.ForeColor = Color.Black;
+            btnNext.Location = new Point(302, 2);
+            btnNext.Name = "btnNext";
+            btnNext.Size = new Size(27, 25);
+            btnNext.TabIndex = 10;
+            btnNext.Text = "> ";
+            btnNext.UseVisualStyleBackColor = false;
+            btnNext.Click += btnNext_Click;
             // 
             // lblPageNo
             // 
-            this.lblPageNo.BackColor = System.Drawing.Color.White;
-            this.lblPageNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPageNo.ForeColor = System.Drawing.Color.Black;
-            this.lblPageNo.Location = new System.Drawing.Point(97, 3);
-            this.lblPageNo.MinimumSize = new System.Drawing.Size(0, 22);
-            this.lblPageNo.Name = "lblPageNo";
-            this.lblPageNo.Size = new System.Drawing.Size(199, 22);
-            this.lblPageNo.TabIndex = 7;
-            this.lblPageNo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblPageNo.BackColor = Color.White;
+            lblPageNo.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblPageNo.ForeColor = Color.Black;
+            lblPageNo.Location = new Point(97, 3);
+            lblPageNo.MinimumSize = new Size(0, 22);
+            lblPageNo.Name = "lblPageNo";
+            lblPageNo.Size = new Size(199, 22);
+            lblPageNo.TabIndex = 7;
+            lblPageNo.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // btnPrevious
             // 
-            this.btnPrevious.BackColor = System.Drawing.Color.White;
-            this.btnPrevious.Enabled = false;
-            this.btnPrevious.FlatAppearance.BorderSize = 0;
-            this.btnPrevious.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(152)))), ((int)(((byte)(210)))));
-            this.btnPrevious.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrevious.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrevious.ForeColor = System.Drawing.Color.Black;
-            this.btnPrevious.Location = new System.Drawing.Point(63, 2);
-            this.btnPrevious.Name = "btnPrevious";
-            this.btnPrevious.Size = new System.Drawing.Size(28, 25);
-            this.btnPrevious.TabIndex = 13;
-            this.btnPrevious.Text = "<";
-            this.btnPrevious.UseVisualStyleBackColor = false;
-            this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
+            btnPrevious.BackColor = Color.White;
+            btnPrevious.Enabled = false;
+            btnPrevious.FlatAppearance.BorderSize = 0;
+            btnPrevious.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 152, 210);
+            btnPrevious.FlatStyle = FlatStyle.Flat;
+            btnPrevious.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnPrevious.ForeColor = Color.Black;
+            btnPrevious.Location = new Point(63, 2);
+            btnPrevious.Name = "btnPrevious";
+            btnPrevious.Size = new Size(28, 25);
+            btnPrevious.TabIndex = 13;
+            btnPrevious.Text = "<";
+            btnPrevious.UseVisualStyleBackColor = false;
+            btnPrevious.Click += btnPrevious_Click;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(51, 14);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(16, 17);
-            this.label5.TabIndex = 103;
-            this.label5.Text = ">";
+            label5.AutoSize = true;
+            label5.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Location = new Point(51, 14);
+            label5.Name = "label5";
+            label5.Size = new Size(19, 20);
+            label5.TabIndex = 103;
+            label5.Text = ">";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(90)))));
-            this.label4.Location = new System.Drawing.Point(64, 13);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(105, 17);
-            this.label4.TabIndex = 104;
-            this.label4.Text = "Manage Stocks";
+            label4.AutoSize = true;
+            label4.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.FromArgb(0, 166, 90);
+            label4.Location = new Point(64, 13);
+            label4.Name = "label4";
+            label4.Size = new Size(124, 20);
+            label4.TabIndex = 104;
+            label4.Text = "Manage Stocks";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(15, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 17);
-            this.label1.TabIndex = 105;
-            this.label1.Text = "POS";
-            // 
-            // line1
-            // 
-            //this.line1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            //this.line1.Location = new System.Drawing.Point(-1, 47);
-            //this.line1.Name = "line1";
-            //this.line1.Size = new System.Drawing.Size(1273, 11);
-            //this.line1.TabIndex = 106;
-            //this.line1.Text = "line1";
+            label1.AutoSize = true;
+            label1.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(15, 14);
+            label1.Name = "label1";
+            label1.Size = new Size(44, 20);
+            label1.TabIndex = 105;
+            label1.Text = "POS";
             // 
             // dataGridViewTextBoxColumn1
             // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "ItemId";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            dataGridViewTextBoxColumn1.HeaderText = "ItemId";
+            dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            dataGridViewTextBoxColumn1.ReadOnly = true;
+            dataGridViewTextBoxColumn1.Width = 125;
             // 
             // dataGridViewTextBoxColumn2
             // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Item";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            dataGridViewTextBoxColumn2.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewTextBoxColumn2.HeaderText = "Item";
+            dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn3
             // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Quantity";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            dataGridViewTextBoxColumn3.HeaderText = "Quantity";
+            dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            dataGridViewTextBoxColumn3.ReadOnly = true;
+            dataGridViewTextBoxColumn3.Width = 125;
             // 
             // dataGridViewTextBoxColumn4
             // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "UnitCost";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            dataGridViewTextBoxColumn4.HeaderText = "UnitCost";
+            dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            dataGridViewTextBoxColumn4.ReadOnly = true;
+            dataGridViewTextBoxColumn4.Width = 125;
             // 
             // dataGridViewTextBoxColumn5
             // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "Total Cost";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            dataGridViewTextBoxColumn5.HeaderText = "Total Cost";
+            dataGridViewTextBoxColumn5.MinimumWidth = 6;
+            dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            dataGridViewTextBoxColumn5.ReadOnly = true;
+            dataGridViewTextBoxColumn5.Width = 125;
             // 
             // dataGridViewTextBoxColumn6
             // 
-            this.dataGridViewTextBoxColumn6.HeaderText = "Retail Price";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            dataGridViewTextBoxColumn6.HeaderText = "Retail Price";
+            dataGridViewTextBoxColumn6.MinimumWidth = 6;
+            dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            dataGridViewTextBoxColumn6.ReadOnly = true;
+            dataGridViewTextBoxColumn6.Width = 125;
             // 
             // dataGridViewTextBoxColumn7
             // 
-            this.dataGridViewTextBoxColumn7.HeaderText = "Batch";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            dataGridViewTextBoxColumn7.HeaderText = "Batch";
+            dataGridViewTextBoxColumn7.MinimumWidth = 6;
+            dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            dataGridViewTextBoxColumn7.ReadOnly = true;
+            dataGridViewTextBoxColumn7.Width = 125;
             // 
             // dataGridViewTextBoxColumn8
             // 
-            this.dataGridViewTextBoxColumn8.HeaderText = "Discount";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            dataGridViewTextBoxColumn8.HeaderText = "Discount";
+            dataGridViewTextBoxColumn8.MinimumWidth = 6;
+            dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            dataGridViewTextBoxColumn8.ReadOnly = true;
+            dataGridViewTextBoxColumn8.Width = 125;
             // 
             // dataGridViewTextBoxColumn9
             // 
-            this.dataGridViewTextBoxColumn9.HeaderText = "Sales Tax";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            dataGridViewTextBoxColumn9.HeaderText = "Sales Tax";
+            dataGridViewTextBoxColumn9.MinimumWidth = 6;
+            dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            dataGridViewTextBoxColumn9.ReadOnly = true;
+            dataGridViewTextBoxColumn9.Width = 125;
             // 
             // dataGridViewTextBoxColumn10
             // 
-            this.dataGridViewTextBoxColumn10.HeaderText = "Net Value";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            dataGridViewTextBoxColumn10.HeaderText = "Net Value";
+            dataGridViewTextBoxColumn10.MinimumWidth = 6;
+            dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            dataGridViewTextBoxColumn10.ReadOnly = true;
+            dataGridViewTextBoxColumn10.Width = 125;
             // 
             // dataGridViewTextBoxColumn11
             // 
-            this.dataGridViewTextBoxColumn11.HeaderText = "Create At";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            dataGridViewTextBoxColumn11.HeaderText = "Create At";
+            dataGridViewTextBoxColumn11.MinimumWidth = 6;
+            dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            dataGridViewTextBoxColumn11.ReadOnly = true;
+            dataGridViewTextBoxColumn11.Width = 125;
             // 
             // frmManageStocks
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1271, 561);
-            //this.Controls.Add(this.line1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.pbInfo);
-            this.Controls.Add(this.cmbSuppliers);
-            this.Controls.Add(this.txtSearchByName);
-            this.Controls.Add(this.lblTo);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.lblFrom);
-            this.Controls.Add(this.dtpTo);
-            this.Controls.Add(this.dtpFrom);
-            this.Controls.Add(this.btnExcel);
-            this.Controls.Add(this.btnPrint);
-            this.Controls.Add(this.btnAddNewStock);
-            this.Controls.Add(this.btnRefresh);
-            this.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name = "frmManageStocks";
-            this.Text = "Manage Stock";
-            this.Load += new System.EventHandler(this.frmManageStocks_Load);
-            this.flowPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbInfo)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(8F, 18F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
+            ClientSize = new Size(1498, 629);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(label1);
+            Controls.Add(panel2);
+            Controls.Add(pbInfo);
+            Controls.Add(cmbSuppliers);
+            Controls.Add(txtSearchByName);
+            Controls.Add(lblTo);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(lblFrom);
+            Controls.Add(dtpTo);
+            Controls.Add(dtpFrom);
+            Controls.Add(btnExcel);
+            Controls.Add(btnPrint);
+            Controls.Add(btnAddNewStock);
+            Controls.Add(btnRefresh);
+            Font = new Font("Microsoft Tai Le", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Name = "frmManageStocks";
+            Text = "Manage Stock";
+            Load += frmManageStocks_Load;
+            flowPanel.ResumeLayout(false);
+            panel3.ResumeLayout(false);
+            ((ISupportInitialize)dataGridView1).EndInit();
+            ((ISupportInitialize)pbInfo).EndInit();
+            panel2.ResumeLayout(false);
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.FlowLayoutPanel flowPanel;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colItemId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colItemName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colQuantity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colUnitCost;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colToalCost;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colRetailPrice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colBatch;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colDiscount;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colSalesTax;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNetValue;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colCreatedAt;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -662,5 +678,18 @@
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Label lblPageNo;
         private System.Windows.Forms.Button btnPrevious;
+        private Panel panel3;
+        private DataGridView dataGridView1;
+        private DataGridViewTextBoxColumn colItemId;
+        private DataGridViewTextBoxColumn colItemName;
+        private DataGridViewTextBoxColumn colQuantity;
+        private DataGridViewTextBoxColumn colUnitCost;
+        private DataGridViewTextBoxColumn colToalCost;
+        private DataGridViewTextBoxColumn colRetailPrice;
+        private DataGridViewTextBoxColumn colBatch;
+        private DataGridViewTextBoxColumn colDiscount;
+        private DataGridViewTextBoxColumn colSalesTax;
+        private DataGridViewTextBoxColumn colNetValue;
+        private DataGridViewTextBoxColumn colCreatedAt;
     }
 }

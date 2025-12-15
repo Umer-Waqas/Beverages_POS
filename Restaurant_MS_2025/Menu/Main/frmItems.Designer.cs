@@ -28,737 +28,728 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtItemName = new System.Windows.Forms.TextBox();
-            this.btnAddItem = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtBarcode = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.btnAddSupplier = new System.Windows.Forms.Button();
-            this.txtUnit = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.numReOrderingLevel = new System.Windows.Forms.NumericUpDown();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.numOpeningStock = new System.Windows.Forms.NumericUpDown();
-            this.txtGenericName = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtUnitCostPrice = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.ErrItemName = new System.Windows.Forms.Label();
-            this.ErrBarcode = new System.Windows.Forms.Label();
-            this.ErrSupplier = new System.Windows.Forms.Label();
-            this.ErrUnit = new System.Windows.Forms.Label();
-            this.ErrReOrderingLevel = new System.Windows.Forms.Label();
-            this.ErrOpeningStock = new System.Windows.Forms.Label();
-            this.ErrChemicalName = new System.Windows.Forms.Label();
-            this.ErrUnitCostPrice = new System.Windows.Forms.Label();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.ErrMessage = new System.Windows.Forms.Label();
-            this.lstSuppliers = new System.Windows.Forms.ListBox();
-            this.lblInvlalidUnitCost = new System.Windows.Forms.Label();
-            this.pnlOpeningStock = new System.Windows.Forms.Panel();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.lblInvalidRetailPrice = new System.Windows.Forms.Label();
-            this.errRetailPrice = new System.Windows.Forms.Label();
-            this.txtRetailPrice = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.cmbCategory = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.btnAddCategory = new System.Windows.Forms.Button();
-            this.errCategory = new System.Windows.Forms.Label();
-            this.numConvUnit = new System.Windows.Forms.NumericUpDown();
-            this.errConvUnit = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.cmbManufacturer = new System.Windows.Forms.ComboBox();
-            this.cmbRacks = new System.Windows.Forms.ComboBox();
-            this.btnAddRack = new System.Windows.Forms.Button();
-            this.btnAddManf = new System.Windows.Forms.Button();
-            this.chkIsRawItem = new System.Windows.Forms.CheckBox();
-            this.errManf = new System.Windows.Forms.Label();
-            this.cmbSubCategory = new System.Windows.Forms.ComboBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.btnAddSubCategory = new System.Windows.Forms.Button();
-            this.chkCheckStockOnSale = new System.Windows.Forms.CheckBox();
-            this.cmbItemType = new System.Windows.Forms.ComboBox();
-            this.errItemType = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.numReOrderingLevel)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numOpeningStock)).BeginInit();
-            this.pnlOpeningStock.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numConvUnit)).BeginInit();
-            this.SuspendLayout();
+            label1 = new Label();
+            txtItemName = new TextBox();
+            btnAddItem = new Button();
+            label2 = new Label();
+            txtBarcode = new TextBox();
+            label3 = new Label();
+            label4 = new Label();
+            btnAddSupplier = new Button();
+            txtUnit = new TextBox();
+            label5 = new Label();
+            numReOrderingLevel = new NumericUpDown();
+            label6 = new Label();
+            label7 = new Label();
+            numOpeningStock = new NumericUpDown();
+            txtGenericName = new TextBox();
+            label8 = new Label();
+            txtUnitCostPrice = new TextBox();
+            label9 = new Label();
+            ErrItemName = new Label();
+            ErrBarcode = new Label();
+            ErrSupplier = new Label();
+            ErrUnit = new Label();
+            ErrReOrderingLevel = new Label();
+            ErrOpeningStock = new Label();
+            ErrChemicalName = new Label();
+            ErrUnitCostPrice = new Label();
+            btnClear = new Button();
+            ErrMessage = new Label();
+            lstSuppliers = new ListBox();
+            lblInvlalidUnitCost = new Label();
+            pnlOpeningStock = new Panel();
+            btnCancel = new Button();
+            lblInvalidRetailPrice = new Label();
+            errRetailPrice = new Label();
+            txtRetailPrice = new TextBox();
+            label13 = new Label();
+            cmbCategory = new ComboBox();
+            label11 = new Label();
+            btnAddCategory = new Button();
+            errCategory = new Label();
+            numConvUnit = new NumericUpDown();
+            errConvUnit = new Label();
+            label14 = new Label();
+            label12 = new Label();
+            cmbManufacturer = new ComboBox();
+            cmbRacks = new ComboBox();
+            btnAddRack = new Button();
+            btnAddManf = new Button();
+            chkIsRawItem = new CheckBox();
+            errManf = new Label();
+            cmbSubCategory = new ComboBox();
+            label16 = new Label();
+            btnAddSubCategory = new Button();
+            chkCheckStockOnSale = new CheckBox();
+            cmbItemType = new ComboBox();
+            errItemType = new Label();
+            label15 = new Label();
+            ((ISupportInitialize)numReOrderingLevel).BeginInit();
+            ((ISupportInitialize)numOpeningStock).BeginInit();
+            pnlOpeningStock.SuspendLayout();
+            ((ISupportInitialize)numConvUnit).BeginInit();
+            SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(40, 166);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Item Name";
+            label1.AutoSize = true;
+            label1.Font = new Font("Microsoft Tai Le", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(40, 166);
+            label1.Name = "label1";
+            label1.Size = new Size(108, 25);
+            label1.TabIndex = 0;
+            label1.Text = "Item Name";
             // 
             // txtItemName
             // 
-            this.txtItemName.Location = new System.Drawing.Point(286, 161);
-            this.txtItemName.MaxLength = 599;
-            this.txtItemName.Name = "txtItemName";
-            this.txtItemName.Size = new System.Drawing.Size(248, 25);
-            this.txtItemName.TabIndex = 1;
+            txtItemName.Location = new Point(286, 161);
+            txtItemName.MaxLength = 599;
+            txtItemName.Name = "txtItemName";
+            txtItemName.Size = new Size(248, 25);
+            txtItemName.TabIndex = 1;
             // 
             // btnAddItem
             // 
-            this.btnAddItem.Location = new System.Drawing.Point(421, 561);
-            this.btnAddItem.Name = "btnAddItem";
-            this.btnAddItem.Size = new System.Drawing.Size(174, 51);
-            this.btnAddItem.TabIndex = 16;
-            this.btnAddItem.Text = "Add";
-            this.btnAddItem.UseVisualStyleBackColor = true;
-            this.btnAddItem.Click += new System.EventHandler(this.btnAddItem_Click);
+            btnAddItem.Location = new Point(421, 561);
+            btnAddItem.Name = "btnAddItem";
+            btnAddItem.Size = new Size(174, 51);
+            btnAddItem.TabIndex = 16;
+            btnAddItem.Text = "Add";
+            btnAddItem.UseVisualStyleBackColor = true;
+            btnAddItem.Click += btnAddItem_Click;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(801, 75);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 25);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Rack#";
+            label2.AutoSize = true;
+            label2.Font = new Font("Microsoft Tai Le", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(801, 75);
+            label2.Name = "label2";
+            label2.Size = new Size(65, 25);
+            label2.TabIndex = 4;
+            label2.Text = "Rack#";
             // 
             // txtBarcode
             // 
-            this.txtBarcode.Location = new System.Drawing.Point(1011, 109);
-            this.txtBarcode.MaxLength = 599;
-            this.txtBarcode.Name = "txtBarcode";
-            this.txtBarcode.Size = new System.Drawing.Size(246, 25);
-            this.txtBarcode.TabIndex = 3;
+            txtBarcode.Location = new Point(1011, 109);
+            txtBarcode.MaxLength = 599;
+            txtBarcode.Name = "txtBarcode";
+            txtBarcode.Size = new Size(246, 25);
+            txtBarcode.TabIndex = 3;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(801, 116);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 25);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Barcode";
+            label3.AutoSize = true;
+            label3.Font = new Font("Microsoft Tai Le", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(801, 116);
+            label3.Name = "label3";
+            label3.Size = new Size(83, 25);
+            label3.TabIndex = 6;
+            label3.Text = "Barcode";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(801, 154);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 25);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Suppliers";
+            label4.AutoSize = true;
+            label4.Font = new Font("Microsoft Tai Le", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Location = new Point(801, 154);
+            label4.Name = "label4";
+            label4.Size = new Size(93, 25);
+            label4.TabIndex = 8;
+            label4.Text = "Suppliers";
             // 
             // btnAddSupplier
             // 
-            this.btnAddSupplier.Location = new System.Drawing.Point(1283, 135);
-            this.btnAddSupplier.Name = "btnAddSupplier";
-            this.btnAddSupplier.Size = new System.Drawing.Size(32, 25);
-            this.btnAddSupplier.TabIndex = 5;
-            this.btnAddSupplier.Text = "+";
-            this.btnAddSupplier.UseVisualStyleBackColor = true;
-            this.btnAddSupplier.Click += new System.EventHandler(this.btnAddSupplier_Click);
+            btnAddSupplier.Location = new Point(1283, 135);
+            btnAddSupplier.Name = "btnAddSupplier";
+            btnAddSupplier.Size = new Size(32, 25);
+            btnAddSupplier.TabIndex = 5;
+            btnAddSupplier.Text = "+";
+            btnAddSupplier.UseVisualStyleBackColor = true;
+            btnAddSupplier.Click += btnAddSupplier_Click;
             // 
             // txtUnit
             // 
-            this.txtUnit.Location = new System.Drawing.Point(286, 232);
-            this.txtUnit.Name = "txtUnit";
-            this.txtUnit.Size = new System.Drawing.Size(248, 25);
-            this.txtUnit.TabIndex = 8;
-            this.txtUnit.Text = "Pack";
+            txtUnit.Location = new Point(286, 232);
+            txtUnit.Name = "txtUnit";
+            txtUnit.Size = new Size(248, 25);
+            txtUnit.TabIndex = 8;
+            txtUnit.Text = "Pack";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(38, 232);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(205, 25);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Unit(Strips, Boxes etc.)";
+            label5.AutoSize = true;
+            label5.Font = new Font("Microsoft Tai Le", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Location = new Point(38, 232);
+            label5.Name = "label5";
+            label5.Size = new Size(205, 25);
+            label5.TabIndex = 11;
+            label5.Text = "Unit(Strips, Boxes etc.)";
             // 
             // numReOrderingLevel
             // 
-            this.numReOrderingLevel.Location = new System.Drawing.Point(292, 313);
-            this.numReOrderingLevel.Maximum = new decimal(new int[] {
-            2147483647,
-            0,
-            0,
-            0});
-            this.numReOrderingLevel.Name = "numReOrderingLevel";
-            this.numReOrderingLevel.Size = new System.Drawing.Size(138, 25);
-            this.numReOrderingLevel.TabIndex = 10;
-            this.numReOrderingLevel.ThousandsSeparator = true;
+            numReOrderingLevel.Location = new Point(292, 313);
+            numReOrderingLevel.Maximum = new decimal(new int[] { int.MaxValue, 0, 0, 0 });
+            numReOrderingLevel.Name = "numReOrderingLevel";
+            numReOrderingLevel.Size = new Size(138, 25);
+            numReOrderingLevel.TabIndex = 10;
+            numReOrderingLevel.ThousandsSeparator = true;
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(40, 314);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(170, 25);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "Re-Ordering Level";
+            label6.AutoSize = true;
+            label6.Font = new Font("Microsoft Tai Le", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.Location = new Point(40, 314);
+            label6.Name = "label6";
+            label6.Size = new Size(170, 25);
+            label6.TabIndex = 14;
+            label6.Text = "Re-Ordering Level";
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(10, -4);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(142, 25);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "Opening Stock";
+            label7.AutoSize = true;
+            label7.Location = new Point(10, -4);
+            label7.Name = "label7";
+            label7.Size = new Size(142, 25);
+            label7.TabIndex = 16;
+            label7.Text = "Opening Stock";
             // 
             // numOpeningStock
             // 
-            this.numOpeningStock.Location = new System.Drawing.Point(242, -4);
-            this.numOpeningStock.Name = "numOpeningStock";
-            this.numOpeningStock.Size = new System.Drawing.Size(113, 33);
-            this.numOpeningStock.TabIndex = 12;
+            numOpeningStock.Location = new Point(242, -4);
+            numOpeningStock.Name = "numOpeningStock";
+            numOpeningStock.Size = new Size(113, 33);
+            numOpeningStock.TabIndex = 12;
             // 
             // txtGenericName
             // 
-            this.txtGenericName.Location = new System.Drawing.Point(744, 696);
-            this.txtGenericName.Name = "txtGenericName";
-            this.txtGenericName.Size = new System.Drawing.Size(246, 25);
-            this.txtGenericName.TabIndex = 13;
-            this.txtGenericName.Visible = false;
+            txtGenericName.Location = new Point(744, 696);
+            txtGenericName.Name = "txtGenericName";
+            txtGenericName.Size = new Size(246, 25);
+            txtGenericName.TabIndex = 13;
+            txtGenericName.Visible = false;
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(615, 699);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(94, 18);
-            this.label8.TabIndex = 17;
-            this.label8.Text = "Generic Name";
-            this.label8.Visible = false;
+            label8.AutoSize = true;
+            label8.Location = new Point(615, 699);
+            label8.Name = "label8";
+            label8.Size = new Size(94, 18);
+            label8.TabIndex = 17;
+            label8.Text = "Generic Name";
+            label8.Visible = false;
             // 
             // txtUnitCostPrice
             // 
-            this.txtUnitCostPrice.Location = new System.Drawing.Point(292, 443);
-            this.txtUnitCostPrice.Name = "txtUnitCostPrice";
-            this.txtUnitCostPrice.Size = new System.Drawing.Size(246, 25);
-            this.txtUnitCostPrice.TabIndex = 14;
-            this.txtUnitCostPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUnitCostPrice_KeyPress);
+            txtUnitCostPrice.Location = new Point(292, 443);
+            txtUnitCostPrice.Name = "txtUnitCostPrice";
+            txtUnitCostPrice.Size = new Size(246, 25);
+            txtUnitCostPrice.TabIndex = 14;
+            txtUnitCostPrice.KeyPress += txtUnitCostPrice_KeyPress;
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(42, 438);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(140, 25);
-            this.label9.TabIndex = 19;
-            this.label9.Text = "Unit Cost Price";
+            label9.AutoSize = true;
+            label9.Font = new Font("Microsoft Tai Le", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label9.Location = new Point(42, 438);
+            label9.Name = "label9";
+            label9.Size = new Size(140, 25);
+            label9.TabIndex = 19;
+            label9.Text = "Unit Cost Price";
             // 
             // ErrItemName
             // 
-            this.ErrItemName.AutoSize = true;
-            this.ErrItemName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ErrItemName.ForeColor = System.Drawing.Color.Red;
-            this.ErrItemName.Location = new System.Drawing.Point(533, 165);
-            this.ErrItemName.Name = "ErrItemName";
-            this.ErrItemName.Size = new System.Drawing.Size(24, 29);
-            this.ErrItemName.TabIndex = 24;
-            this.ErrItemName.Text = "*";
-            this.ErrItemName.Visible = false;
+            ErrItemName.AutoSize = true;
+            ErrItemName.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ErrItemName.ForeColor = Color.Red;
+            ErrItemName.Location = new Point(533, 165);
+            ErrItemName.Name = "ErrItemName";
+            ErrItemName.Size = new Size(24, 29);
+            ErrItemName.TabIndex = 24;
+            ErrItemName.Text = "*";
+            ErrItemName.Visible = false;
             // 
             // ErrBarcode
             // 
-            this.ErrBarcode.AutoSize = true;
-            this.ErrBarcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ErrBarcode.ForeColor = System.Drawing.Color.Red;
-            this.ErrBarcode.Location = new System.Drawing.Point(1260, 109);
-            this.ErrBarcode.Name = "ErrBarcode";
-            this.ErrBarcode.Size = new System.Drawing.Size(24, 29);
-            this.ErrBarcode.TabIndex = 26;
-            this.ErrBarcode.Text = "*";
-            this.ErrBarcode.Visible = false;
+            ErrBarcode.AutoSize = true;
+            ErrBarcode.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ErrBarcode.ForeColor = Color.Red;
+            ErrBarcode.Location = new Point(1260, 109);
+            ErrBarcode.Name = "ErrBarcode";
+            ErrBarcode.Size = new Size(24, 29);
+            ErrBarcode.TabIndex = 26;
+            ErrBarcode.Text = "*";
+            ErrBarcode.Visible = false;
             // 
             // ErrSupplier
             // 
-            this.ErrSupplier.AutoSize = true;
-            this.ErrSupplier.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ErrSupplier.ForeColor = System.Drawing.Color.Red;
-            this.ErrSupplier.Location = new System.Drawing.Point(1260, 154);
-            this.ErrSupplier.Name = "ErrSupplier";
-            this.ErrSupplier.Size = new System.Drawing.Size(24, 29);
-            this.ErrSupplier.TabIndex = 27;
-            this.ErrSupplier.Text = "*";
-            this.ErrSupplier.Visible = false;
+            ErrSupplier.AutoSize = true;
+            ErrSupplier.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ErrSupplier.ForeColor = Color.Red;
+            ErrSupplier.Location = new Point(1260, 154);
+            ErrSupplier.Name = "ErrSupplier";
+            ErrSupplier.Size = new Size(24, 29);
+            ErrSupplier.TabIndex = 27;
+            ErrSupplier.Text = "*";
+            ErrSupplier.Visible = false;
             // 
             // ErrUnit
             // 
-            this.ErrUnit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ErrUnit.ForeColor = System.Drawing.Color.Red;
-            this.ErrUnit.Location = new System.Drawing.Point(533, 234);
-            this.ErrUnit.Name = "ErrUnit";
-            this.ErrUnit.Size = new System.Drawing.Size(14, 13);
-            this.ErrUnit.TabIndex = 28;
-            this.ErrUnit.Text = "*";
-            this.ErrUnit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ErrUnit.Visible = false;
+            ErrUnit.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ErrUnit.ForeColor = Color.Red;
+            ErrUnit.Location = new Point(533, 234);
+            ErrUnit.Name = "ErrUnit";
+            ErrUnit.Size = new Size(14, 13);
+            ErrUnit.TabIndex = 28;
+            ErrUnit.Text = "*";
+            ErrUnit.TextAlign = ContentAlignment.MiddleLeft;
+            ErrUnit.Visible = false;
             // 
             // ErrReOrderingLevel
             // 
-            this.ErrReOrderingLevel.AutoSize = true;
-            this.ErrReOrderingLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ErrReOrderingLevel.ForeColor = System.Drawing.Color.Red;
-            this.ErrReOrderingLevel.Location = new System.Drawing.Point(431, 314);
-            this.ErrReOrderingLevel.Name = "ErrReOrderingLevel";
-            this.ErrReOrderingLevel.Size = new System.Drawing.Size(24, 29);
-            this.ErrReOrderingLevel.TabIndex = 29;
-            this.ErrReOrderingLevel.Text = "*";
-            this.ErrReOrderingLevel.Visible = false;
+            ErrReOrderingLevel.AutoSize = true;
+            ErrReOrderingLevel.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ErrReOrderingLevel.ForeColor = Color.Red;
+            ErrReOrderingLevel.Location = new Point(431, 314);
+            ErrReOrderingLevel.Name = "ErrReOrderingLevel";
+            ErrReOrderingLevel.Size = new Size(24, 29);
+            ErrReOrderingLevel.TabIndex = 29;
+            ErrReOrderingLevel.Text = "*";
+            ErrReOrderingLevel.Visible = false;
             // 
             // ErrOpeningStock
             // 
-            this.ErrOpeningStock.AutoSize = true;
-            this.ErrOpeningStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ErrOpeningStock.ForeColor = System.Drawing.Color.Red;
-            this.ErrOpeningStock.Location = new System.Drawing.Point(252, 4);
-            this.ErrOpeningStock.Name = "ErrOpeningStock";
-            this.ErrOpeningStock.Size = new System.Drawing.Size(24, 29);
-            this.ErrOpeningStock.TabIndex = 30;
-            this.ErrOpeningStock.Text = "*";
-            this.ErrOpeningStock.Visible = false;
+            ErrOpeningStock.AutoSize = true;
+            ErrOpeningStock.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ErrOpeningStock.ForeColor = Color.Red;
+            ErrOpeningStock.Location = new Point(252, 4);
+            ErrOpeningStock.Name = "ErrOpeningStock";
+            ErrOpeningStock.Size = new Size(24, 29);
+            ErrOpeningStock.TabIndex = 30;
+            ErrOpeningStock.Text = "*";
+            ErrOpeningStock.Visible = false;
             // 
             // ErrChemicalName
             // 
-            this.ErrChemicalName.AutoSize = true;
-            this.ErrChemicalName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ErrChemicalName.ForeColor = System.Drawing.Color.Red;
-            this.ErrChemicalName.Location = new System.Drawing.Point(750, 642);
-            this.ErrChemicalName.Name = "ErrChemicalName";
-            this.ErrChemicalName.Size = new System.Drawing.Size(24, 29);
-            this.ErrChemicalName.TabIndex = 31;
-            this.ErrChemicalName.Text = "*";
-            this.ErrChemicalName.Visible = false;
+            ErrChemicalName.AutoSize = true;
+            ErrChemicalName.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ErrChemicalName.ForeColor = Color.Red;
+            ErrChemicalName.Location = new Point(750, 642);
+            ErrChemicalName.Name = "ErrChemicalName";
+            ErrChemicalName.Size = new Size(24, 29);
+            ErrChemicalName.TabIndex = 31;
+            ErrChemicalName.Text = "*";
+            ErrChemicalName.Visible = false;
             // 
             // ErrUnitCostPrice
             // 
-            this.ErrUnitCostPrice.AutoSize = true;
-            this.ErrUnitCostPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ErrUnitCostPrice.ForeColor = System.Drawing.Color.Red;
-            this.ErrUnitCostPrice.Location = new System.Drawing.Point(541, 440);
-            this.ErrUnitCostPrice.Name = "ErrUnitCostPrice";
-            this.ErrUnitCostPrice.Size = new System.Drawing.Size(24, 29);
-            this.ErrUnitCostPrice.TabIndex = 32;
-            this.ErrUnitCostPrice.Text = "*";
-            this.ErrUnitCostPrice.Visible = false;
+            ErrUnitCostPrice.AutoSize = true;
+            ErrUnitCostPrice.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ErrUnitCostPrice.ForeColor = Color.Red;
+            ErrUnitCostPrice.Location = new Point(541, 440);
+            ErrUnitCostPrice.Name = "ErrUnitCostPrice";
+            ErrUnitCostPrice.Size = new Size(24, 29);
+            ErrUnitCostPrice.TabIndex = 32;
+            ErrUnitCostPrice.Text = "*";
+            ErrUnitCostPrice.Visible = false;
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(630, 561);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(174, 51);
-            this.btnClear.TabIndex = 17;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            btnClear.Location = new Point(630, 561);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(174, 51);
+            btnClear.TabIndex = 17;
+            btnClear.Text = "Clear";
+            btnClear.UseVisualStyleBackColor = true;
+            btnClear.Click += btnClear_Click;
             // 
             // ErrMessage
             // 
-            this.ErrMessage.AutoSize = true;
-            this.ErrMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ErrMessage.ForeColor = System.Drawing.Color.Coral;
-            this.ErrMessage.Location = new System.Drawing.Point(43, 10);
-            this.ErrMessage.Name = "ErrMessage";
-            this.ErrMessage.Size = new System.Drawing.Size(330, 18);
-            this.ErrMessage.TabIndex = 34;
-            this.ErrMessage.Text = "Alert : Please Fill All The Mandatory Fields.";
-            this.ErrMessage.Visible = false;
+            ErrMessage.AutoSize = true;
+            ErrMessage.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ErrMessage.ForeColor = Color.Coral;
+            ErrMessage.Location = new Point(43, 10);
+            ErrMessage.Name = "ErrMessage";
+            ErrMessage.Size = new Size(330, 18);
+            ErrMessage.TabIndex = 34;
+            ErrMessage.Text = "Alert : Please Fill All The Mandatory Fields.";
+            ErrMessage.Visible = false;
             // 
             // lstSuppliers
             // 
-            this.lstSuppliers.FormattingEnabled = true;
-            this.lstSuppliers.ItemHeight = 18;
-            this.lstSuppliers.Location = new System.Drawing.Point(1011, 135);
-            this.lstSuppliers.Name = "lstSuppliers";
-            this.lstSuppliers.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
-            this.lstSuppliers.Size = new System.Drawing.Size(246, 130);
-            this.lstSuppliers.TabIndex = 4;
+            lstSuppliers.FormattingEnabled = true;
+            lstSuppliers.ItemHeight = 18;
+            lstSuppliers.Location = new Point(1011, 135);
+            lstSuppliers.Name = "lstSuppliers";
+            lstSuppliers.SelectionMode = SelectionMode.MultiSimple;
+            lstSuppliers.Size = new Size(246, 130);
+            lstSuppliers.TabIndex = 4;
             // 
             // lblInvlalidUnitCost
             // 
-            this.lblInvlalidUnitCost.AutoSize = true;
-            this.lblInvlalidUnitCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInvlalidUnitCost.ForeColor = System.Drawing.Color.Red;
-            this.lblInvlalidUnitCost.Location = new System.Drawing.Point(563, 443);
-            this.lblInvlalidUnitCost.Name = "lblInvlalidUnitCost";
-            this.lblInvlalidUnitCost.Size = new System.Drawing.Size(102, 17);
-            this.lblInvlalidUnitCost.TabIndex = 73;
-            this.lblInvlalidUnitCost.Text = "Invalid Number";
-            this.lblInvlalidUnitCost.Visible = false;
+            lblInvlalidUnitCost.AutoSize = true;
+            lblInvlalidUnitCost.Font = new Font("Microsoft Sans Serif", 8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblInvlalidUnitCost.ForeColor = Color.Red;
+            lblInvlalidUnitCost.Location = new Point(563, 443);
+            lblInvlalidUnitCost.Name = "lblInvlalidUnitCost";
+            lblInvlalidUnitCost.Size = new Size(102, 17);
+            lblInvlalidUnitCost.TabIndex = 73;
+            lblInvlalidUnitCost.Text = "Invalid Number";
+            lblInvlalidUnitCost.Visible = false;
             // 
             // pnlOpeningStock
             // 
-            this.pnlOpeningStock.Controls.Add(this.numOpeningStock);
-            this.pnlOpeningStock.Controls.Add(this.label7);
-            this.pnlOpeningStock.Controls.Add(this.ErrOpeningStock);
-            this.pnlOpeningStock.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlOpeningStock.Location = new System.Drawing.Point(32, 392);
-            this.pnlOpeningStock.Name = "pnlOpeningStock";
-            this.pnlOpeningStock.Size = new System.Drawing.Size(508, 30);
-            this.pnlOpeningStock.TabIndex = 74;
+            pnlOpeningStock.Controls.Add(numOpeningStock);
+            pnlOpeningStock.Controls.Add(label7);
+            pnlOpeningStock.Controls.Add(ErrOpeningStock);
+            pnlOpeningStock.Font = new Font("Microsoft Tai Le", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            pnlOpeningStock.Location = new Point(32, 392);
+            pnlOpeningStock.Name = "pnlOpeningStock";
+            pnlOpeningStock.Size = new Size(508, 30);
+            pnlOpeningStock.TabIndex = 74;
             // 
             // btnCancel
             // 
-            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(837, 561);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(174, 51);
-            this.btnCancel.TabIndex = 18;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            btnCancel.DialogResult = DialogResult.Cancel;
+            btnCancel.Location = new Point(837, 561);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new Size(174, 51);
+            btnCancel.TabIndex = 18;
+            btnCancel.Text = "Cancel";
+            btnCancel.UseVisualStyleBackColor = true;
+            btnCancel.Click += btnCancel_Click;
             // 
             // lblInvalidRetailPrice
             // 
-            this.lblInvalidRetailPrice.AutoSize = true;
-            this.lblInvalidRetailPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInvalidRetailPrice.ForeColor = System.Drawing.Color.Red;
-            this.lblInvalidRetailPrice.Location = new System.Drawing.Point(563, 351);
-            this.lblInvalidRetailPrice.Name = "lblInvalidRetailPrice";
-            this.lblInvalidRetailPrice.Size = new System.Drawing.Size(102, 17);
-            this.lblInvalidRetailPrice.TabIndex = 78;
-            this.lblInvalidRetailPrice.Text = "Invalid Number";
-            this.lblInvalidRetailPrice.Visible = false;
+            lblInvalidRetailPrice.AutoSize = true;
+            lblInvalidRetailPrice.Font = new Font("Microsoft Sans Serif", 8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblInvalidRetailPrice.ForeColor = Color.Red;
+            lblInvalidRetailPrice.Location = new Point(563, 351);
+            lblInvalidRetailPrice.Name = "lblInvalidRetailPrice";
+            lblInvalidRetailPrice.Size = new Size(102, 17);
+            lblInvalidRetailPrice.TabIndex = 78;
+            lblInvalidRetailPrice.Text = "Invalid Number";
+            lblInvalidRetailPrice.Visible = false;
             // 
             // errRetailPrice
             // 
-            this.errRetailPrice.AutoSize = true;
-            this.errRetailPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.errRetailPrice.ForeColor = System.Drawing.Color.Red;
-            this.errRetailPrice.Location = new System.Drawing.Point(543, 350);
-            this.errRetailPrice.Name = "errRetailPrice";
-            this.errRetailPrice.Size = new System.Drawing.Size(24, 29);
-            this.errRetailPrice.TabIndex = 77;
-            this.errRetailPrice.Text = "*";
-            this.errRetailPrice.Visible = false;
+            errRetailPrice.AutoSize = true;
+            errRetailPrice.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            errRetailPrice.ForeColor = Color.Red;
+            errRetailPrice.Location = new Point(543, 350);
+            errRetailPrice.Name = "errRetailPrice";
+            errRetailPrice.Size = new Size(24, 29);
+            errRetailPrice.TabIndex = 77;
+            errRetailPrice.Text = "*";
+            errRetailPrice.Visible = false;
             // 
             // txtRetailPrice
             // 
-            this.txtRetailPrice.Location = new System.Drawing.Point(289, 351);
-            this.txtRetailPrice.Name = "txtRetailPrice";
-            this.txtRetailPrice.Size = new System.Drawing.Size(246, 25);
-            this.txtRetailPrice.TabIndex = 11;
-            this.txtRetailPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRetailPrice_KeyPress);
+            txtRetailPrice.Location = new Point(289, 351);
+            txtRetailPrice.Name = "txtRetailPrice";
+            txtRetailPrice.Size = new Size(246, 25);
+            txtRetailPrice.TabIndex = 11;
+            txtRetailPrice.KeyPress += txtRetailPrice_KeyPress;
             // 
             // label13
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(40, 351);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(108, 25);
-            this.label13.TabIndex = 76;
-            this.label13.Text = "Retail Price";
+            label13.AutoSize = true;
+            label13.Font = new Font("Microsoft Tai Le", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label13.Location = new Point(40, 351);
+            label13.Name = "label13";
+            label13.Size = new Size(108, 25);
+            label13.TabIndex = 76;
+            label13.Text = "Retail Price";
             // 
             // cmbCategory
             // 
-            this.cmbCategory.FormattingEnabled = true;
-            this.cmbCategory.Location = new System.Drawing.Point(286, 118);
-            this.cmbCategory.Name = "cmbCategory";
-            this.cmbCategory.Size = new System.Drawing.Size(248, 26);
-            this.cmbCategory.TabIndex = 6;
-            this.cmbCategory.SelectedIndexChanged += new System.EventHandler(this.cmbCategory_SelectedIndexChanged);
+            cmbCategory.FormattingEnabled = true;
+            cmbCategory.Location = new Point(286, 118);
+            cmbCategory.Name = "cmbCategory";
+            cmbCategory.Size = new Size(248, 26);
+            cmbCategory.TabIndex = 6;
+            cmbCategory.SelectedIndexChanged += cmbCategory_SelectedIndexChanged;
             // 
             // label11
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(41, 116);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(92, 25);
-            this.label11.TabIndex = 11;
-            this.label11.Text = "Category";
+            label11.AutoSize = true;
+            label11.Font = new Font("Microsoft Tai Le", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label11.Location = new Point(41, 116);
+            label11.Name = "label11";
+            label11.Size = new Size(92, 25);
+            label11.TabIndex = 11;
+            label11.Text = "Category";
             // 
             // btnAddCategory
             // 
-            this.btnAddCategory.Location = new System.Drawing.Point(560, 115);
-            this.btnAddCategory.Name = "btnAddCategory";
-            this.btnAddCategory.Size = new System.Drawing.Size(32, 24);
-            this.btnAddCategory.TabIndex = 7;
-            this.btnAddCategory.Text = "+";
-            this.btnAddCategory.UseVisualStyleBackColor = true;
-            this.btnAddCategory.Click += new System.EventHandler(this.btnAddCategory_Click);
+            btnAddCategory.Location = new Point(560, 115);
+            btnAddCategory.Name = "btnAddCategory";
+            btnAddCategory.Size = new Size(32, 24);
+            btnAddCategory.TabIndex = 7;
+            btnAddCategory.Text = "+";
+            btnAddCategory.UseVisualStyleBackColor = true;
+            btnAddCategory.Click += btnAddCategory_Click;
             // 
             // errCategory
             // 
-            this.errCategory.AutoSize = true;
-            this.errCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.errCategory.ForeColor = System.Drawing.Color.Red;
-            this.errCategory.Location = new System.Drawing.Point(533, 118);
-            this.errCategory.Name = "errCategory";
-            this.errCategory.Size = new System.Drawing.Size(24, 29);
-            this.errCategory.TabIndex = 28;
-            this.errCategory.Text = "*";
-            this.errCategory.Visible = false;
+            errCategory.AutoSize = true;
+            errCategory.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            errCategory.ForeColor = Color.Red;
+            errCategory.Location = new Point(533, 118);
+            errCategory.Name = "errCategory";
+            errCategory.Size = new Size(24, 29);
+            errCategory.TabIndex = 28;
+            errCategory.Text = "*";
+            errCategory.Visible = false;
             // 
             // numConvUnit
             // 
-            this.numConvUnit.Location = new System.Drawing.Point(291, 272);
-            this.numConvUnit.Maximum = new decimal(new int[] {
-            2147483647,
-            0,
-            0,
-            0});
-            this.numConvUnit.Name = "numConvUnit";
-            this.numConvUnit.Size = new System.Drawing.Size(138, 25);
-            this.numConvUnit.TabIndex = 9;
-            this.numConvUnit.ThousandsSeparator = true;
-            this.numConvUnit.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            numConvUnit.Location = new Point(291, 272);
+            numConvUnit.Maximum = new decimal(new int[] { int.MaxValue, 0, 0, 0 });
+            numConvUnit.Name = "numConvUnit";
+            numConvUnit.Size = new Size(138, 25);
+            numConvUnit.TabIndex = 9;
+            numConvUnit.ThousandsSeparator = true;
+            numConvUnit.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
             // errConvUnit
             // 
-            this.errConvUnit.AutoSize = true;
-            this.errConvUnit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.errConvUnit.ForeColor = System.Drawing.Color.Red;
-            this.errConvUnit.Location = new System.Drawing.Point(431, 273);
-            this.errConvUnit.Name = "errConvUnit";
-            this.errConvUnit.Size = new System.Drawing.Size(24, 29);
-            this.errConvUnit.TabIndex = 29;
-            this.errConvUnit.Text = "*";
-            this.errConvUnit.Visible = false;
+            errConvUnit.AutoSize = true;
+            errConvUnit.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            errConvUnit.ForeColor = Color.Red;
+            errConvUnit.Location = new Point(431, 273);
+            errConvUnit.Name = "errConvUnit";
+            errConvUnit.Size = new Size(24, 29);
+            errConvUnit.TabIndex = 29;
+            errConvUnit.Text = "*";
+            errConvUnit.Visible = false;
             // 
             // label14
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(40, 279);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(152, 25);
-            this.label14.TabIndex = 11;
-            this.label14.Text = "Conversion Unit";
+            label14.AutoSize = true;
+            label14.Font = new Font("Microsoft Tai Le", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label14.Location = new Point(40, 279);
+            label14.Name = "label14";
+            label14.Size = new Size(152, 25);
+            label14.TabIndex = 11;
+            label14.Text = "Conversion Unit";
             // 
             // label12
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(801, 289);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(129, 25);
-            this.label12.TabIndex = 11;
-            this.label12.Text = "Manufacturer";
+            label12.AutoSize = true;
+            label12.Font = new Font("Microsoft Tai Le", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label12.Location = new Point(801, 289);
+            label12.Name = "label12";
+            label12.Size = new Size(129, 25);
+            label12.TabIndex = 11;
+            label12.Text = "Manufacturer";
             // 
             // cmbManufacturer
             // 
-            this.cmbManufacturer.FormattingEnabled = true;
-            this.cmbManufacturer.Location = new System.Drawing.Point(1011, 286);
-            this.cmbManufacturer.Name = "cmbManufacturer";
-            this.cmbManufacturer.Size = new System.Drawing.Size(248, 26);
-            this.cmbManufacturer.TabIndex = 6;
+            cmbManufacturer.FormattingEnabled = true;
+            cmbManufacturer.Location = new Point(1011, 286);
+            cmbManufacturer.Name = "cmbManufacturer";
+            cmbManufacturer.Size = new Size(248, 26);
+            cmbManufacturer.TabIndex = 6;
             // 
             // cmbRacks
             // 
-            this.cmbRacks.FormattingEnabled = true;
-            this.cmbRacks.Location = new System.Drawing.Point(1009, 72);
-            this.cmbRacks.Name = "cmbRacks";
-            this.cmbRacks.Size = new System.Drawing.Size(248, 26);
-            this.cmbRacks.TabIndex = 2;
+            cmbRacks.FormattingEnabled = true;
+            cmbRacks.Location = new Point(1009, 72);
+            cmbRacks.Name = "cmbRacks";
+            cmbRacks.Size = new Size(248, 26);
+            cmbRacks.TabIndex = 2;
             // 
             // btnAddRack
             // 
-            this.btnAddRack.Location = new System.Drawing.Point(1283, 69);
-            this.btnAddRack.Name = "btnAddRack";
-            this.btnAddRack.Size = new System.Drawing.Size(32, 25);
-            this.btnAddRack.TabIndex = 5;
-            this.btnAddRack.Text = "+";
-            this.btnAddRack.UseVisualStyleBackColor = true;
-            this.btnAddRack.Click += new System.EventHandler(this.btnAddRack_Click);
+            btnAddRack.Location = new Point(1283, 69);
+            btnAddRack.Name = "btnAddRack";
+            btnAddRack.Size = new Size(32, 25);
+            btnAddRack.TabIndex = 5;
+            btnAddRack.Text = "+";
+            btnAddRack.UseVisualStyleBackColor = true;
+            btnAddRack.Click += btnAddRack_Click;
             // 
             // btnAddManf
             // 
-            this.btnAddManf.Location = new System.Drawing.Point(1281, 288);
-            this.btnAddManf.Name = "btnAddManf";
-            this.btnAddManf.Size = new System.Drawing.Size(32, 24);
-            this.btnAddManf.TabIndex = 7;
-            this.btnAddManf.Text = "+";
-            this.btnAddManf.UseVisualStyleBackColor = true;
-            this.btnAddManf.Click += new System.EventHandler(this.btnAddManf_Click);
+            btnAddManf.Location = new Point(1281, 288);
+            btnAddManf.Name = "btnAddManf";
+            btnAddManf.Size = new Size(32, 24);
+            btnAddManf.TabIndex = 7;
+            btnAddManf.Text = "+";
+            btnAddManf.UseVisualStyleBackColor = true;
+            btnAddManf.Click += btnAddManf_Click;
             // 
             // chkIsRawItem
             // 
-            this.chkIsRawItem.AutoSize = true;
-            this.chkIsRawItem.Location = new System.Drawing.Point(622, 646);
-            this.chkIsRawItem.Name = "chkIsRawItem";
-            this.chkIsRawItem.Size = new System.Drawing.Size(87, 22);
-            this.chkIsRawItem.TabIndex = 79;
-            this.chkIsRawItem.Text = "Raw Item";
-            this.chkIsRawItem.UseVisualStyleBackColor = true;
-            this.chkIsRawItem.Visible = false;
-            this.chkIsRawItem.CheckedChanged += new System.EventHandler(this.chkIsRawItem_CheckedChanged);
+            chkIsRawItem.AutoSize = true;
+            chkIsRawItem.Location = new Point(622, 646);
+            chkIsRawItem.Name = "chkIsRawItem";
+            chkIsRawItem.Size = new Size(87, 22);
+            chkIsRawItem.TabIndex = 79;
+            chkIsRawItem.Text = "Raw Item";
+            chkIsRawItem.UseVisualStyleBackColor = true;
+            chkIsRawItem.Visible = false;
+            chkIsRawItem.CheckedChanged += chkIsRawItem_CheckedChanged;
             // 
             // errManf
             // 
-            this.errManf.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.errManf.ForeColor = System.Drawing.Color.Red;
-            this.errManf.Location = new System.Drawing.Point(1260, 289);
-            this.errManf.Name = "errManf";
-            this.errManf.Size = new System.Drawing.Size(16, 17);
-            this.errManf.TabIndex = 50;
-            this.errManf.Text = "*";
-            this.errManf.Visible = false;
-            this.errManf.Click += new System.EventHandler(this.label15_Click);
+            errManf.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            errManf.ForeColor = Color.Red;
+            errManf.Location = new Point(1260, 289);
+            errManf.Name = "errManf";
+            errManf.Size = new Size(16, 17);
+            errManf.TabIndex = 50;
+            errManf.Text = "*";
+            errManf.Visible = false;
+            errManf.Click += label15_Click;
             // 
             // cmbSubCategory
             // 
-            this.cmbSubCategory.FormattingEnabled = true;
-            this.cmbSubCategory.Location = new System.Drawing.Point(1011, 338);
-            this.cmbSubCategory.Name = "cmbSubCategory";
-            this.cmbSubCategory.Size = new System.Drawing.Size(248, 26);
-            this.cmbSubCategory.TabIndex = 80;
+            cmbSubCategory.FormattingEnabled = true;
+            cmbSubCategory.Location = new Point(1011, 338);
+            cmbSubCategory.Name = "cmbSubCategory";
+            cmbSubCategory.Size = new Size(248, 26);
+            cmbSubCategory.TabIndex = 80;
+            cmbSubCategory.Visible = false;
             // 
             // label16
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(801, 341);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(131, 25);
-            this.label16.TabIndex = 82;
-            this.label16.Text = "Sub Category";
+            label16.AutoSize = true;
+            label16.Font = new Font("Microsoft Tai Le", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label16.Location = new Point(801, 341);
+            label16.Name = "label16";
+            label16.Size = new Size(131, 25);
+            label16.TabIndex = 82;
+            label16.Text = "Sub Category";
+            label16.Visible = false;
             // 
             // btnAddSubCategory
             // 
-            this.btnAddSubCategory.Location = new System.Drawing.Point(1283, 335);
-            this.btnAddSubCategory.Name = "btnAddSubCategory";
-            this.btnAddSubCategory.Size = new System.Drawing.Size(32, 24);
-            this.btnAddSubCategory.TabIndex = 81;
-            this.btnAddSubCategory.Text = "+";
-            this.btnAddSubCategory.UseVisualStyleBackColor = true;
-            this.btnAddSubCategory.Click += new System.EventHandler(this.btnAddSubCategory_Click);
+            btnAddSubCategory.Location = new Point(1283, 335);
+            btnAddSubCategory.Name = "btnAddSubCategory";
+            btnAddSubCategory.Size = new Size(32, 24);
+            btnAddSubCategory.TabIndex = 81;
+            btnAddSubCategory.Text = "+";
+            btnAddSubCategory.UseVisualStyleBackColor = true;
+            btnAddSubCategory.Visible = false;
+            btnAddSubCategory.Click += btnAddSubCategory_Click;
             // 
             // chkCheckStockOnSale
             // 
-            this.chkCheckStockOnSale.AutoSize = true;
-            this.chkCheckStockOnSale.Location = new System.Drawing.Point(622, 674);
-            this.chkCheckStockOnSale.Name = "chkCheckStockOnSale";
-            this.chkCheckStockOnSale.Size = new System.Drawing.Size(152, 22);
-            this.chkCheckStockOnSale.TabIndex = 83;
-            this.chkCheckStockOnSale.Text = "Check Stock on Sale";
-            this.chkCheckStockOnSale.UseVisualStyleBackColor = true;
-            this.chkCheckStockOnSale.Visible = false;
+            chkCheckStockOnSale.AutoSize = true;
+            chkCheckStockOnSale.Location = new Point(622, 674);
+            chkCheckStockOnSale.Name = "chkCheckStockOnSale";
+            chkCheckStockOnSale.Size = new Size(152, 22);
+            chkCheckStockOnSale.TabIndex = 83;
+            chkCheckStockOnSale.Text = "Check Stock on Sale";
+            chkCheckStockOnSale.UseVisualStyleBackColor = true;
+            chkCheckStockOnSale.Visible = false;
             // 
             // cmbItemType
             // 
-            this.cmbItemType.FormattingEnabled = true;
-            this.cmbItemType.Location = new System.Drawing.Point(285, 72);
-            this.cmbItemType.Name = "cmbItemType";
-            this.cmbItemType.Size = new System.Drawing.Size(248, 26);
-            this.cmbItemType.TabIndex = 84;
+            cmbItemType.FormattingEnabled = true;
+            cmbItemType.Location = new Point(285, 72);
+            cmbItemType.Name = "cmbItemType";
+            cmbItemType.Size = new Size(248, 26);
+            cmbItemType.TabIndex = 84;
             // 
             // errItemType
             // 
-            this.errItemType.AutoSize = true;
-            this.errItemType.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.errItemType.ForeColor = System.Drawing.Color.Red;
-            this.errItemType.Location = new System.Drawing.Point(532, 72);
-            this.errItemType.Name = "errItemType";
-            this.errItemType.Size = new System.Drawing.Size(24, 29);
-            this.errItemType.TabIndex = 87;
-            this.errItemType.Text = "*";
-            this.errItemType.Visible = false;
+            errItemType.AutoSize = true;
+            errItemType.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            errItemType.ForeColor = Color.Red;
+            errItemType.Location = new Point(532, 72);
+            errItemType.Name = "errItemType";
+            errItemType.Size = new Size(24, 29);
+            errItemType.TabIndex = 87;
+            errItemType.Text = "*";
+            errItemType.Visible = false;
             // 
             // label15
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(40, 70);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(98, 25);
-            this.label15.TabIndex = 86;
-            this.label15.Text = "Item Type";
+            label15.AutoSize = true;
+            label15.Font = new Font("Microsoft Tai Le", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label15.Location = new Point(40, 70);
+            label15.Name = "label15";
+            label15.Size = new Size(98, 25);
+            label15.TabIndex = 86;
+            label15.Text = "Item Type";
             // 
             // frmItems
             // 
-            this.AcceptButton = this.btnAddItem;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
-            this.BackColor = System.Drawing.Color.White;
-            this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(1351, 784);
-            this.Controls.Add(this.cmbItemType);
-            this.Controls.Add(this.errItemType);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.chkCheckStockOnSale);
-            this.Controls.Add(this.cmbSubCategory);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.btnAddSubCategory);
-            this.Controls.Add(this.chkIsRawItem);
-            this.Controls.Add(this.cmbRacks);
-            this.Controls.Add(this.cmbManufacturer);
-            this.Controls.Add(this.cmbCategory);
-            this.Controls.Add(this.lblInvalidRetailPrice);
-            this.Controls.Add(this.errRetailPrice);
-            this.Controls.Add(this.txtRetailPrice);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.pnlOpeningStock);
-            this.Controls.Add(this.lblInvlalidUnitCost);
-            this.Controls.Add(this.lstSuppliers);
-            this.Controls.Add(this.ErrMessage);
-            this.Controls.Add(this.ErrUnitCostPrice);
-            this.Controls.Add(this.ErrChemicalName);
-            this.Controls.Add(this.errConvUnit);
-            this.Controls.Add(this.ErrReOrderingLevel);
-            this.Controls.Add(this.errCategory);
-            this.Controls.Add(this.ErrUnit);
-            this.Controls.Add(this.ErrSupplier);
-            this.Controls.Add(this.ErrBarcode);
-            this.Controls.Add(this.ErrItemName);
-            this.Controls.Add(this.txtUnitCostPrice);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.txtGenericName);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.numConvUnit);
-            this.Controls.Add(this.numReOrderingLevel);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.txtUnit);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.btnAddManf);
-            this.Controls.Add(this.btnAddCategory);
-            this.Controls.Add(this.btnAddRack);
-            this.Controls.Add(this.btnAddSupplier);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtBarcode);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnClear);
-            this.Controls.Add(this.btnAddItem);
-            this.Controls.Add(this.txtItemName);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.errManf);
-            this.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MinimumSize = new System.Drawing.Size(565, 602);
-            this.Name = "frmItems";
-            this.Text = "Add New Item";
-            this.Load += new System.EventHandler(this.frmItems_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.numReOrderingLevel)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numOpeningStock)).EndInit();
-            this.pnlOpeningStock.ResumeLayout(false);
-            this.pnlOpeningStock.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numConvUnit)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AcceptButton = btnAddItem;
+            AutoScaleDimensions = new SizeF(8F, 18F);
+            AutoScaleMode = AutoScaleMode.Font;
+            AutoScroll = true;
+            BackColor = Color.White;
+            CancelButton = btnCancel;
+            ClientSize = new Size(1351, 784);
+            Controls.Add(cmbItemType);
+            Controls.Add(errItemType);
+            Controls.Add(label15);
+            Controls.Add(chkCheckStockOnSale);
+            Controls.Add(cmbSubCategory);
+            Controls.Add(label16);
+            Controls.Add(btnAddSubCategory);
+            Controls.Add(chkIsRawItem);
+            Controls.Add(cmbRacks);
+            Controls.Add(cmbManufacturer);
+            Controls.Add(cmbCategory);
+            Controls.Add(lblInvalidRetailPrice);
+            Controls.Add(errRetailPrice);
+            Controls.Add(txtRetailPrice);
+            Controls.Add(label13);
+            Controls.Add(pnlOpeningStock);
+            Controls.Add(lblInvlalidUnitCost);
+            Controls.Add(lstSuppliers);
+            Controls.Add(ErrMessage);
+            Controls.Add(ErrUnitCostPrice);
+            Controls.Add(ErrChemicalName);
+            Controls.Add(errConvUnit);
+            Controls.Add(ErrReOrderingLevel);
+            Controls.Add(errCategory);
+            Controls.Add(ErrUnit);
+            Controls.Add(ErrSupplier);
+            Controls.Add(ErrBarcode);
+            Controls.Add(ErrItemName);
+            Controls.Add(txtUnitCostPrice);
+            Controls.Add(label9);
+            Controls.Add(txtGenericName);
+            Controls.Add(label8);
+            Controls.Add(label6);
+            Controls.Add(numConvUnit);
+            Controls.Add(numReOrderingLevel);
+            Controls.Add(label12);
+            Controls.Add(txtUnit);
+            Controls.Add(label11);
+            Controls.Add(label14);
+            Controls.Add(label5);
+            Controls.Add(btnAddManf);
+            Controls.Add(btnAddCategory);
+            Controls.Add(btnAddRack);
+            Controls.Add(btnAddSupplier);
+            Controls.Add(label4);
+            Controls.Add(txtBarcode);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(btnCancel);
+            Controls.Add(btnClear);
+            Controls.Add(btnAddItem);
+            Controls.Add(txtItemName);
+            Controls.Add(label1);
+            Controls.Add(errManf);
+            Font = new Font("Microsoft Tai Le", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            MinimumSize = new Size(565, 602);
+            Name = "frmItems";
+            Text = "Add New Item";
+            Load += frmItems_Load;
+            ((ISupportInitialize)numReOrderingLevel).EndInit();
+            ((ISupportInitialize)numOpeningStock).EndInit();
+            pnlOpeningStock.ResumeLayout(false);
+            pnlOpeningStock.PerformLayout();
+            ((ISupportInitialize)numConvUnit).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 

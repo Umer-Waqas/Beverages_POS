@@ -18,6 +18,7 @@ namespace Restaurant_MS_Infrastructure.Database
                 // Run seeders in order (respect foreign key dependencies)
 
                 //UsersSeeder.Seed(context);
+                BatchSeeder.Seed(context);
                 RolesSeeder.Seed(context);
                 RightsSeeder.Seed(context);
                 AdminInvoiceSettingsSeeder.Seed(context);

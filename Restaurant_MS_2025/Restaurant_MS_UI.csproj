@@ -40,6 +40,33 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>dsShared.xsd</DependentUpon>
     </Compile>
+    <Compile Update="Menu\Suppliers\frmAddSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Menu\Suppliers\frmAddSupplierShortCuts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Menu\Suppliers\frmEditSupplierPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Menu\Suppliers\frmStockPayments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Menu\Suppliers\frmSupplierInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Menu\Suppliers\frmSupplierPaymentHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Menu\Suppliers\frmSuppliers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Menu\Suppliers\frmSuppliersList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Menu\Suppliers\frmSuppliersShortCuts.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>

@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GK_SupplierMS", "GK_SupplierMS\GK_SupplierMS.csproj", "{A14EF80F-F9AD-483B-8E5B-3EF9E1FDA2FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GK.Shared.Core", "..\..\GK_Shared\GK.Shared.Core\GK.Shared.Core.csproj", "{E8F49A7A-4C9A-4BAD-848F-9EEFE1662944}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A14EF80F-F9AD-483B-8E5B-3EF9E1FDA2FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A14EF80F-F9AD-483B-8E5B-3EF9E1FDA2FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A14EF80F-F9AD-483B-8E5B-3EF9E1FDA2FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A14EF80F-F9AD-483B-8E5B-3EF9E1FDA2FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8F49A7A-4C9A-4BAD-848F-9EEFE1662944}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8F49A7A-4C9A-4BAD-848F-9EEFE1662944}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8F49A7A-4C9A-4BAD-848F-9EEFE1662944}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8F49A7A-4C9A-4BAD-848F-9EEFE1662944}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

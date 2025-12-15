@@ -24,6 +24,7 @@ namespace Restaurant_MS_UI.Menu.Main
             SharedFunctions.SetSmallButtonsStyle(new[] { btnAddSupplier, btnAddRack, btnAddSubCategory });
             using (unitOfWork = new UnitOfWork())
             {
+                LoadSuppliers(unitOfWork);
                 LoadItemTypes(unitOfWork);
                 LoadCategories(unitOfWork);
                 LoadManufacturers(unitOfWork);
@@ -45,14 +46,14 @@ namespace Restaurant_MS_UI.Menu.Main
 
         private void LoadRacks(UnitOfWork _unitOfWork)
         {
-            //List<> rs = _unitOfWork.RackRepository.GetAllActiveRacks();
-            //Rack r = new Rack();
-            //r.RackId = 0;
-            //r.Name = "Select Rack";
-            //rs.Insert(0, r);
-            //cmbRacks.DataSource = rs;
-            //cmbRacks.DisplayMember = "Name";
-            //cmbRacks.ValueMember = "RackId";
+            List<Rack> rs = _unitOfWork.RackRepository.GetAllActiveRacks();
+            Rack r = new Rack();
+            r.RackId = 0;
+            r.Name = "Select Rack";
+            rs.Insert(0, r);
+            cmbRacks.DataSource = rs;
+            cmbRacks.DisplayMember = "Name";
+            cmbRacks.ValueMember = "RackId";
         }
 
         private void LoadItemTypes(UnitOfWork _unitOfWork)
@@ -134,7 +135,9 @@ namespace Restaurant_MS_UI.Menu.Main
             {
                 Item LoadedItem = new Item();
                 LoadedItem = p_unitOfWork.ItemRspository.GetItemData_ByITemId(ItemId);
+                this.cmbItemType.SelectedValue = LoadedItem.ItemTypeId;
                 txtItemName.Text = LoadedItem.ItemName;
+                cmbItemType.SelectedValue = Convert.ToInt64(LoadedItem.ItemTypeId);
                 if (LoadedItem.Rack != null)
                 {
                     cmbRacks.SelectedValue = LoadedItem.Rack.RackId;
@@ -339,7 +342,10 @@ namespace Restaurant_MS_UI.Menu.Main
             objItem.IsRawItem = chkIsRawItem.Checked;
             objItem.CheckStockOnSale = chkCheckStockOnSale.Checked;
             objItem.Barcode = txtBarcode.Text;
-            objItem.Rack = unitOfWork.RackRepository.GetById(Convert.ToInt32(cmbRacks.SelectedValue));
+            if (cmbRacks.SelectedIndex > 0)
+            {
+                objItem.RackId = Convert.ToInt32(cmbRacks.SelectedValue); // unitOfWork.RackRepository.GetById(Convert.ToInt32(cmbRacks.SelectedValue));
+            }
             objItem.Unit = txtUnit.Text.Trim();
             int convUnit = Convert.ToInt32(numConvUnit.Value);
             if (this.ItemId > 0 && convUnit != objItem.ConversionUnit)

@@ -3,6 +3,7 @@ using Restaurant_MS_UI.App.MenuBar.Preferences;
 using Restaurant_MS_UI.App.MenuBar.ShopActivities;
 using Restaurant_MS_UI.App.MenuBar.UserMenue;
 using Restaurant_MS_UI.Menu.Help;
+using Restaurant_MS_UI.Menu.Suppliers;
 using System.Timers;
 using Utilities;
 
@@ -541,8 +542,8 @@ namespace Restaurant_MS_UI.App
         }
         private void stockSuppliersToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //SetactiveItem(sender);
-            //SharedFunctions.OpenForm(new frmSuppliers(), this);
+            SetactiveItem(sender);
+            SharedFunctions.OpenForm(new frmSuppliers(), this);
         }
         private void createUserToolStripMenuItem_Click(object sender, EventArgs e)
         {

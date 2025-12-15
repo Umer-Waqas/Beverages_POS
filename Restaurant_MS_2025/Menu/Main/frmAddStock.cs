@@ -992,7 +992,10 @@ namespace Restaurant_MS_UI.Menu.Main
                     using (unitOfWork = new UnitOfWork())
                     {
                         Stock objStock = new Stock();
-                        objStock.Supplier = unitOfWork.SupplierRepository.GetById(cmbSuppliers.SelectedValue);
+                        if (cmbSuppliers.SelectedIndex > 0)
+                        {
+                            objStock.SupplierId = Convert.ToInt64(cmbSuppliers.SelectedValue); // unitOfWork.SupplierRepository.GetById(cmbSuppliers.SelectedValue);
+                        }
                         objStock.SupplierInvoiceNo = txtSupplierInvoiceNo.Text.Trim();
                         if (lblImagePath.Text.ToLower() == "no file choosen")
                             objStock.ImagePath = null;
@@ -1281,7 +1284,7 @@ namespace Restaurant_MS_UI.Menu.Main
 
             if (obj.StockItemId <= 0) // don't get item from db when stock is being updated, because item updation is not allowed
             {
-                obj.Item = unitOfWork.ItemRspository.GetById(Convert.ToInt32(r.Cells["colItemId"].Value));
+                obj.Item = unitOfWork.ItemRspository.GetById(Convert.ToInt64(r.Cells["colItemId"].Value));
             }
             obj.ConversionUnit = Convert.ToInt32(r.Cells["colConvUnit"].Value);
             double qty = 0; double.TryParse(r.Cells["colQuantity"].Value.ToString(), out qty);

@@ -1137,6 +1137,7 @@ namespace Restaurant_MS_Infrastructure.Repository
                 .Include(i => i.Rack)
                 .Include(i => i.Category)
                 //.Include(i => i.Category1)
+                //.Include(i => i.ItemType)
                 .FirstOrDefault();
         }
 
@@ -1277,7 +1278,7 @@ namespace Restaurant_MS_Infrastructure.Repository
                                                .Where(i => i.IsActive
                                                    && (i.CreatedAt) >= (DateFrom) &&
                                                    (i.CreatedAt) <= (DateTo))
-                                                    //.Sum(inv => (long?)inv.StockItems.Where(item => item.IsActive)
+                                                        //.Sum(inv => (long?)inv.StockItems.Where(item => item.IsActive)
                                                         .Sum(item => 0);
             v.ItemWisePurchases = PurchasesList;
             return v;
